@@ -15,7 +15,7 @@ SITE_URL = "https://www.techpicksio.com"
 OUTPUT_FILE = "sitemap.xml"
 
 # Files/folders to skip
-EXCLUDE_FILES = {"404.html"}
+EXCLUDE_FILES = {"404.html", "google7a99f5f52cfafe41.html"}
 EXCLUDE_DIRS = {".git", ".github", "node_modules"}
 # ----------------
 
