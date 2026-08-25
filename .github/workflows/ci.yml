@@ -19,6 +19,12 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Install test dependencies
+        run: pip install pytest
+
+      - name: HTML contract tests (metadata, affiliate links, schema, links)
+        run: pytest tests/
+
       - name: style.css matches src/ (no hand-edits, no stale build)
         run: |
           bash build.sh
