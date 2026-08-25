@@ -17,14 +17,29 @@ import re
 import sys
 
 # Marker classes that intentionally have no rule of their own: the typography
-# plugin references `not-prose` from inside :not() selectors, and `group` is a
-# hook for group-hover variants.
-IGNORE = {"not-prose", "group"}
+# plugin references `not-prose` from inside :not() selectors, `group` is a
+# hook for group-hover variants, and `lead` marks the "quick answer" intro
+# paragraph on article pages — always paired with text-lg/text-slate-600/mb-8,
+# which already provide its whole visual treatment.
+IGNORE = {"not-prose", "group", "lead"}
 
 
 def escape(cls: str) -> str:
     """Escape a class name the way Tailwind escapes it in compiled CSS."""
     return re.sub(r"([:/.\[\]()%,#!])", r"\\\1", cls)
+
+
+def is_resolved(cls: str, css: str) -> bool:
+    """Whether `cls` has a matching selector somewhere in `css`.
+
+    A plain substring check would call "p-8" resolved on the strength of an
+    unrelated ".p-80" rule, since ".p-8" is a substring of ".p-80". This
+    requires a real selector boundary right after the match — the next
+    character (a combinator, a pseudo-class colon, end of string, ...) must
+    not be one that could continue the same class name.
+    """
+    needle = re.escape("." + escape(cls))
+    return re.search(needle + r"(?![A-Za-z0-9_-])", css) is not None
 
 
 def main() -> int:
@@ -39,7 +54,7 @@ def main() -> int:
             c for c in used
             if c not in IGNORE
             and not c.startswith("tpi-")
-            and ("." + escape(c)) not in css
+            and not is_resolved(c, css)
         )
         if missing:
             total += len(missing)
