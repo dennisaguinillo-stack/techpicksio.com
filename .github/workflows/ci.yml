@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: style.css matches src/ (no hand-edits, no stale build)
+        run: |
+          bash build.sh
+          git diff --exit-code style.css
+
+      - name: Every class used in HTML resolves in style.css
+        run: python3 check-classes.py
+
+      - name: sitemap.xml covers every .html file on disk
+        run: |
+          cp sitemap.xml /tmp/sitemap.before.xml
+          python3 generate_sitemap.py
+          # Compare URL sets only — lastmod is expected to change every run
+          # and is kept current by the separate update-sitemap workflow.
+          grep -o '<loc>[^<]*</loc>' /tmp/sitemap.before.xml | sort > /tmp/before.urls
+          grep -o '<loc>[^<]*</loc>' sitemap.xml | sort > /tmp/after.urls
+          diff -u /tmp/before.urls /tmp/after.urls
