@@ -245,10 +245,29 @@
 </head>
 <body class="antialiased bg-slate-50">
 
-    <header class="bg-white border-b-2 border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-4xl mx-auto px-4 py-6 text-center">
-            <a href="index.html" class="text-4xl font-extrabold text-primary tracking-tight lowercase no-underline">techpicksio<span class="text-accent">.com</span></a>
-            <div class="text-sm font-medium text-slate-500 mt-1">Curated Gear & Technical Reviews for Mobile Creators</div>
+    <!-- Reading progress: CSS scroll-driven animation, no JavaScript -->
+    <div class="tpi-progress" aria-hidden="true"></div>
+
+    <header class="tpi-header">
+        <div class="tpi-header__bar">
+            <div class="tpi-header__brand">
+                <a href="index.html" class="tpi-wordmark">TechPicks<span>IO</span></a>
+                <div class="tpi-tagline">Curated gear &amp; technical reviews for mobile creators</div>
+            </div>
+
+            <nav class="tpi-nav" aria-label="Gear categories">
+                <a href="index.html#cages">Rigs &amp; Cages</a>
+                <a href="index.html#audio" aria-current="page">Audio</a>
+                <a href="index.html#light">Light &amp; Optics</a>
+                <a href="index.html#motion">Motion</a>
+                <a href="index.html#data">Drones &amp; Storage</a>
+            </nav>
+
+            <button type="button" class="tpi-toggle" id="tpi-theme-toggle"
+                    aria-label="Switch between light and dark theme" aria-pressed="false">
+                <svg class="tpi-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <svg class="tpi-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            </button>
         </div>
     </header>
     <div class="max-w-4xl mx-auto px-4 pt-6">
@@ -267,15 +286,35 @@
             <h1 class="text-3xl md:text-4xl font-extrabold text-primary mb-6 leading-tight mt-0">5 Best Wireless Lavalier Mics Under $100 for Mobile Creators (2026)</h1>
             <p class="text-sm text-slate-500 mb-6">Last updated: August 24, 2026 &middot; Research-based guide &middot; techpicksio.com</p>
 
-            <p class="lead text-lg text-slate-600 mb-8"><strong>Quick answer:</strong> For smartphone vloggers and mobile creators on a budget, the <strong>BOYA Mini 2</strong> is the best value under $100 — it's roughly a third of the price of the Rode Wireless Micro while delivering AI noise cancellation and 24-bit/48kHz audio in a 5g transmitter. For dual-person interviews, the <strong>Hollyland Lark M2</strong> offers 40 hours of total battery and 300m range. This comparison is based on manufacturer specifications and aggregated user reviews, not hands-on testing.</p>
+            <p class="lead text-lg text-slate-600 mb-4"><strong>Buy the BOYA Mini 2.</strong> At roughly $40&ndash;50 it does the only thing that actually matters here — clean, noise-cancelled 24-bit dialogue — for about a third of what the Rode Wireless Micro costs. If you're a solo creator talking to your own phone, spending more than this buys you features you will not use. <strong>Buy the Hollyland Lark M2 instead if</strong> you record two people at once: 40 hours of battery and 300m of range is the version of this purchase that survives real interview work.</p>
+            <p class="text-xs text-slate-400 mb-8"><strong>How we pick:</strong> published manufacturer specifications and aggregated user reviews &mdash; not hands-on testing.</p>
 
             <img src="images/boya-mini-2.jpg" width="800" height="443" alt="Wireless lavalier microphone for smartphone content creation" class="w-full h-auto rounded-xl mb-8 shadow-md object-cover" style="max-width:420px;">
 
-            <section class="bg-slate-50 border border-slate-200 border-t-4 border-t-accent p-6 rounded-xl my-8 shadow-sm">
-                <span class="inline-block bg-accent text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wider mb-3">Best Value Under $100</span>
-                <h2 class="mt-0 text-2xl mb-3">BOYA Mini 2</h2>
-                <p class="mb-5 text-slate-700">At roughly $40-50 (varies by kit), the BOYA Mini 2 packs AI noise cancellation, 24-bit/48kHz audio, and a 30-hour total battery life into a 5g transmitter — making it the most feature-per-dollar wireless lav mic in the budget tier.</p>
-                <a href="https://www.amazon.com/dp/B0DJSLVNRN?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check Price on Amazon</a>
+            <section class="tpi-verdict not-prose" aria-labelledby="verdict-heading">
+                <span class="tpi-badge tpi-badge--pick">Best overall &mdash; budget wireless lav under $100</span>
+                <h2 id="verdict-heading">BOYA Mini 2</h2>
+                <p>The one to buy if you're a solo creator talking to your own phone. Fixing your audio is the single biggest quality jump available for $50 &mdash; make it the next thing you buy.</p>
+
+                <dl class="tpi-verdict__grid">
+                    <div class="tpi-fact">
+                        <dt>Audio</dt>
+                        <dd>24-bit/48kHz</dd>
+                    </div>
+                    <div class="tpi-fact">
+                        <dt>Battery</dt>
+                        <dd>~30h w/ case</dd>
+                    </div>
+                    <div class="tpi-fact">
+                        <dt>Transmitter</dt>
+                        <dd>5g, AI noise cut</dd>
+                    </div>
+                </dl>
+
+                <a href="https://www.amazon.com/dp/B0DJSLVNRN?tag=techpicksio-20" class="tpi-btn tpi-btn--cta" target="_blank" rel="sponsored nofollow noopener">
+                    Check Live Price &amp; Stock on Amazon
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                </a>
             </section>
 
             <h2>Top Wireless Lav Mics Under $100 Compared</h2>
@@ -291,11 +330,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td class="p-4 border-b border-slate-100"><strong>BOYA Mini 2</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">24-bit/48kHz</td><td class="p-4 border-b border-slate-100 text-slate-600">~30h (w/ case)</td><td class="p-4 border-b border-slate-100 text-slate-600">100m</td><td class="p-4 border-b border-slate-100"><a href="https://www.amazon.com/dp/B0DJSLVNRN?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow">View Deal</a></td></tr>
-                        <tr><td class="p-4 border-b border-slate-100"><strong>Hollyland Lark M2</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">24-bit/48kHz</td><td class="p-4 border-b border-slate-100 text-slate-600">~40h (w/ case)</td><td class="p-4 border-b border-slate-100 text-slate-600">300m</td><td class="p-4 border-b border-slate-100"><a href="https://www.amazon.com/dp/B0CP7QXWPN?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow">View Deal</a></td></tr>
-                        <tr><td class="p-4 border-b border-slate-100"><strong>Mini Mic Pro</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">Digital 2.4GHz</td><td class="p-4 border-b border-slate-100 text-slate-600">~6h (TX only)</td><td class="p-4 border-b border-slate-100 text-slate-600">260m</td><td class="p-4 border-b border-slate-100"><a href="https://www.amazon.com/dp/B0CMJTSVRW?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow">View Deal</a></td></tr>
-                        <tr><td class="p-4 border-b border-slate-100"><strong>MENERESAS 3-in-1</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">2.4GHz digital</td><td class="p-4 border-b border-slate-100 text-slate-600">~15h (receiver)</td><td class="p-4 border-b border-slate-100 text-slate-600">80ft (~24m)</td><td class="p-4 border-b border-slate-100"><a href="https://www.amazon.com/dp/B0G3J8GWT3?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow">View Deal</a></td></tr>
-                        <tr><td class="p-4"><strong>Hollyland Lark A1</strong></td><td class="p-4 text-slate-600">24-bit/48kHz</td><td class="p-4 text-slate-600">120dB SPL handling</td><td class="p-4 text-slate-600">200m</td><td class="p-4"><a href="https://www.amazon.com/dp/B0F31Y1JZ1?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow">View Deal</a></td></tr>
+                        <tr><td class="p-4 border-b border-slate-100"><strong>BOYA Mini 2</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">24-bit/48kHz</td><td class="p-4 border-b border-slate-100 text-slate-600">~30h (w/ case)</td><td class="p-4 border-b border-slate-100 text-slate-600">100m</td><td class="p-4 border-b border-slate-100"><a href="https://www.amazon.com/dp/B0DJSLVNRN?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow noopener">Check Live Price</a></td></tr>
+                        <tr><td class="p-4 border-b border-slate-100"><strong>Hollyland Lark M2</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">24-bit/48kHz</td><td class="p-4 border-b border-slate-100 text-slate-600">~40h (w/ case)</td><td class="p-4 border-b border-slate-100 text-slate-600">300m</td><td class="p-4 border-b border-slate-100"><a href="https://www.amazon.com/dp/B0CP7QXWPN?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow noopener">Check Live Price</a></td></tr>
+                        <tr><td class="p-4 border-b border-slate-100"><strong>Mini Mic Pro</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">Digital 2.4GHz</td><td class="p-4 border-b border-slate-100 text-slate-600">~6h (TX only)</td><td class="p-4 border-b border-slate-100 text-slate-600">260m</td><td class="p-4 border-b border-slate-100"><a href="https://www.amazon.com/dp/B0CMJTSVRW?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow noopener">Check Live Price</a></td></tr>
+                        <tr><td class="p-4 border-b border-slate-100"><strong>MENERESAS 3-in-1</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">2.4GHz digital</td><td class="p-4 border-b border-slate-100 text-slate-600">~15h (receiver)</td><td class="p-4 border-b border-slate-100 text-slate-600">80ft (~24m)</td><td class="p-4 border-b border-slate-100"><a href="https://www.amazon.com/dp/B0G3J8GWT3?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow noopener">Check Live Price</a></td></tr>
+                        <tr><td class="p-4"><strong>Hollyland Lark A1</strong></td><td class="p-4 text-slate-600">24-bit/48kHz</td><td class="p-4 text-slate-600">120dB SPL handling</td><td class="p-4 text-slate-600">200m</td><td class="p-4"><a href="https://www.amazon.com/dp/B0F31Y1JZ1?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow noopener">Check Live Price</a></td></tr>
                     </tbody>
                 </table>
                 <p class="text-xs text-slate-400 mt-2">Specs per manufacturer listings. Prices fluctuate; verify current price on Amazon. All models listed are typically available under $100 for a single-TX kit.</p>
@@ -305,12 +344,12 @@
             <p>We filtered specifically for wireless lavalier mics that meet three criteria: priced under $100 for a usable single-transmitter kit, compatible with smartphones via USB-C or Lightning, and reviewed positively enough across user feedback to recommend to a mobile creator who can't afford to re-shoot because of a mic failure. For higher-end options (the Rode Wireless Micro at ~$130 and DJI Mic Mini at ~$170), see our dedicated <a href="rode-wireless-micro-vs-dji-mic-mini.html">Rode vs. DJI comparison</a>.</p>
 
             <h2>1. BOYA Mini 2 — Best Value</h2>
-            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> The BOYA Mini 2 is a budget wireless lavalier system recording 24-bit/48kHz audio with roughly 30 hours of total battery via its charging case and a 100m wireless range. Its 5g transmitter is the lightest in this roundup and includes AI noise cancellation. Best for solo phone-based creators who stay near their camera.</p>
+            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> <strong>Our pick, and the right buy for most solo creators.</strong> 24-bit/48kHz with AI noise cancellation is genuinely all the audio quality a phone video needs, and at 5g the transmitter is light enough that it doesn't drag a t-shirt collar out of shape on camera. <strong>Skip it if</strong> you work beyond ~100m from your phone, or you need to mic two people.</p>
             <img loading="lazy" src="images/boya-mini-2.jpg" width="800" height="895" alt="BOYA Mini 2 wireless lavalier microphone with charging case" class="w-full h-auto rounded-xl my-6 shadow-sm border border-slate-200" style="max-width:420px;">
             <p>The BOYA Mini 2 is the biggest surprise in the budget wireless mic space. At roughly a third of the price of the Rode Wireless Micro, it delivers AI noise cancellation, 24-bit/48kHz audio, and a total battery life of around 30 hours via its charging case. The 5g transmitter weight is the lightest on this list — light enough that it won't pull down thin shirt collars, which is a real-world advantage reviewers frequently cite. The trade-off is range (100m vs 200-400m for pricier options), but for single-person vlogging where you're always near your phone, that's rarely a limitation.</p>
             <div class="grid md:grid-cols-2 gap-6 my-8">
                 <div class="bg-pro-bg border border-pro-border p-5 rounded-xl">
-                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Commonly Praised</h3>
+                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Why We Picked It</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">✅</span> Extremely lightweight at 5g per transmitter</li>
                         <li class="flex items-start"><span class="mr-2">✅</span> AI noise cancellation at this price point</li>
@@ -318,22 +357,22 @@
                     </ul>
                 </div>
                 <div class="bg-con-bg border border-con-border p-5 rounded-xl">
-                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Commonly Noted Drawbacks</h3>
+                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Where It Falls Short</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">❌</span> 100m range is shorter than mid-tier options</li>
                         <li class="flex items-start"><span class="mr-2">❌</span> No 3.5mm jack for camera use</li>
                     </ul>
                 </div>
             </div>
-            <p><a href="https://www.amazon.com/dp/B0DJSLVNRN?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check BOYA Mini 2 Price on Amazon</a></p>
+            <p><a href="https://www.amazon.com/dp/B0DJSLVNRN?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live BOYA Mini 2 Price on Amazon</a></p>
 
             <h2>2. Hollyland Lark M2 — Best for Dual-Person Interviews</h2>
-            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> The Hollyland Lark M2 is a wireless lavalier kit shipping with two transmitters and a triple-receiver setup covering USB-C, Lightning, and 3.5mm, with 24-bit/48kHz audio and a 300m range. Roughly 40 hours of total battery covers extended shoot days. Best for creators recording two speakers or switching between phone and camera.</p>
+            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> <strong>Buy this the moment you're recording two people.</strong> Two transmitters plus receivers for USB-C, Lightning and 3.5mm mean you can mic an interview and plug into whatever camera turns up, and 300m of range covers a subject who wanders off-mark. 40 hours of battery takes charging off your pre-shoot checklist entirely. <strong>Buy the BOYA instead if</strong> you only ever mic yourself &mdash; this is more system than you'd use.</p>
             <img loading="lazy" src="images/hollyland-lark-m2.jpg" width="800" height="670" alt="Hollyland Lark M2 wireless lavalier microphone system" class="w-full h-auto rounded-xl my-6 shadow-sm border border-slate-200" style="max-width:420px;">
             <p>The Lark M2 ships with two transmitters and a triple-receiver setup (USB-C, Lightning, and 3.5mm), making it the most versatile option here for creators who switch between phone and camera. At 9g per transmitter and 40 hours of total battery via the charging case, it handles long interview days without recharging. The 300m range and 48kHz/24-bit audio put it in near-professional territory, and the one-click noise cancellation works well in moderately noisy environments according to user reviews.</p>
             <div class="grid md:grid-cols-2 gap-6 my-8">
                 <div class="bg-pro-bg border border-pro-border p-5 rounded-xl">
-                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Commonly Praised</h3>
+                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Why We Picked It</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">✅</span> 2TX + 3RX combo covers phone and camera</li>
                         <li class="flex items-start"><span class="mr-2">✅</span> 40-hour total battery from charging case</li>
@@ -341,22 +380,22 @@
                     </ul>
                 </div>
                 <div class="bg-con-bg border border-con-border p-5 rounded-xl">
-                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Commonly Noted Drawbacks</h3>
+                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Where It Falls Short</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">❌</span> Full combo kit can edge above $100</li>
                         <li class="flex items-start"><span class="mr-2">❌</span> Larger charging case than BOYA's</li>
                     </ul>
                 </div>
             </div>
-            <p><a href="https://www.amazon.com/dp/B0CP7QXWPN?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check Hollyland Lark M2 Price on Amazon</a></p>
+            <p><a href="https://www.amazon.com/dp/B0CP7QXWPN?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live Hollyland Lark M2 Price on Amazon</a></p>
 
             <h2>3. Mini Mic Pro — Best Range for the Price</h2>
-            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> The Mini Mic Pro is a budget wireless lavalier system offering a 260m wireless range, the longest in this roundup, using 2.4GHz digital transmission. It ships with a combined Lightning and USB-C receiver, covering both iPhone and Android in one unit. Best for creators recording subjects at distance.</p>
+            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> <strong>Buy this only if distance is genuinely your problem.</strong> 260m is the longest range here, so for miking a subject across a field it's the pick. Everything else is a compromise: the ~6h transmitter battery is the shortest in this roundup, so you'll be planning charges around it. <strong>Skip it for</strong> ordinary talking-head work &mdash; you'd be paying for range you never leave.</p>
             <img loading="lazy" src="images/mini-mic-pro.jpg" width="800" height="916" alt="Mini Mic Pro wireless lavalier microphone with Lightning and USB-C receiver" class="w-full h-auto rounded-xl my-6 shadow-sm border border-slate-200" style="max-width:420px;">
             <p>The Mini Mic Pro stands out for a wireless range (up to 260m) that would normally command a much higher price, using 2.4GHz digital transmission with a near-zero latency codec. It ships with a combined Lightning/USB-C receiver plus swappable windproof covers and sponge heads, so one unit covers both iPhone and Android without buying a separate kit. Battery life sits around 6 hours per charge — shorter than the Hollyland options — but the 2-hour recharge time is fast, and the receiver can power-pass to your phone while recording.</p>
             <div class="grid md:grid-cols-2 gap-6 my-8">
                 <div class="bg-pro-bg border border-pro-border p-5 rounded-xl">
-                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Commonly Praised</h3>
+                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Why We Picked It</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">✅</span> 260m range, longest on this list</li>
                         <li class="flex items-start"><span class="mr-2">✅</span> Combined Lightning/USB-C receiver in one unit</li>
@@ -364,22 +403,22 @@
                     </ul>
                 </div>
                 <div class="bg-con-bg border border-con-border p-5 rounded-xl">
-                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Commonly Noted Drawbacks</h3>
+                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Where It Falls Short</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">❌</span> Shorter ~6h battery life per charge than Hollyland options</li>
                         <li class="flex items-start"><span class="mr-2">❌</span> No dedicated charging case — carry the USB-C cable</li>
                     </ul>
                 </div>
             </div>
-            <p><a href="https://www.amazon.com/dp/B0CMJTSVRW?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check Mini Mic Pro Price on Amazon</a></p>
+            <p><a href="https://www.amazon.com/dp/B0CMJTSVRW?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live Mini Mic Pro Price on Amazon</a></p>
 
             <h2>4. MENERESAS 3-in-1 — Best for Multi-Device Switching</h2>
-            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> The MENERESAS 3-in-1 is a wireless lavalier kit built around a single universal receiver serving iPhone, Android, and camera without swapping adapters. It is rated for an 80ft range with a 15-hour receiver battery and includes dual transmitters. Best for creators who move between multiple devices within one project.</p>
+            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> <strong>Buy this if you switch devices constantly.</strong> One universal receiver covers iPhone, Android and camera with no adapter swapping &mdash; the fiddly part of every other system here. <strong>Skip it if</strong> you shoot outdoors or at any real distance: 80ft (~24m) is by far the shortest range in this roundup, and it's the spec that will bite you first.</p>
             <img loading="lazy" src="images/meneresas-3-in-1.jpg" width="800" height="809" alt="MENERESAS 3-in-1 wireless lavalier microphone with universal receiver" class="w-full h-auto rounded-xl my-6 shadow-sm border border-slate-200" style="max-width:420px;">
             <p>The MENERESAS 3-in-1 is built around a single universal receiver that works across iPhone, Android, and camera without swapping adapters — useful if you regularly move between devices mid-project. It's rated for an 80ft (about 24m) range and a 15-hour receiver battery with a 5-hour transmitter runtime, positioning it as a shorter-range but longer-lasting-on-standby option than the Mini Mic Pro. Dual transmitters support two-person recording out of the box.</p>
             <div class="grid md:grid-cols-2 gap-6 my-8">
                 <div class="bg-pro-bg border border-pro-border p-5 rounded-xl">
-                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Commonly Praised</h3>
+                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Why We Picked It</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">✅</span> Single 3-in-1 receiver for iPhone, Android, and camera</li>
                         <li class="flex items-start"><span class="mr-2">✅</span> Dual transmitters included for two-person recording</li>
@@ -387,22 +426,22 @@
                     </ul>
                 </div>
                 <div class="bg-con-bg border border-con-border p-5 rounded-xl">
-                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Commonly Noted Drawbacks</h3>
+                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Where It Falls Short</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">❌</span> 80ft range is shortest on this list</li>
                         <li class="flex items-start"><span class="mr-2">❌</span> Newer brand with less long-term track record than Hollyland or BOYA</li>
                     </ul>
                 </div>
             </div>
-            <p><a href="https://www.amazon.com/dp/B0G3J8GWT3?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check MENERESAS 3-in-1 Price on Amazon</a></p>
+            <p><a href="https://www.amazon.com/dp/B0G3J8GWT3?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live MENERESAS 3-in-1 Price on Amazon</a></p>
 
             <h2>5. Hollyland Lark A1 — Best Battery Life</h2>
-            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> The Hollyland Lark A1 is a wireless lavalier system with a 200m range, 24-bit/48kHz audio, and three-level intelligent noise cancellation. A 120dB SPL rating lets it handle sudden loud noise without the distortion cheaper microphones exhibit. Best for creators recording events or conferences in unpredictable noise conditions.</p>
+            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> <strong>Buy this if your audio environment is unpredictable.</strong> A 120dB SPL rating means a sudden shout, a round of applause, or a passing truck won't distort the take the way it would on cheaper mics, and three-level noise cancellation handles the steadier noise underneath. <strong>Skip it if</strong> you shoot in controlled quiet &mdash; that's headroom a calm room never asks for.</p>
             <img loading="lazy" src="images/hollyland-lark-a1.jpg" width="800" height="790" alt="Hollyland Lark A1 wireless lavalier microphone combo with charging case" class="w-full h-auto rounded-xl my-6 shadow-sm border border-slate-200" style="max-width:420px;">
             <p>The Lark A1 pairs a 200m range with 48kHz/24-bit studio-grade audio and 3-level intelligent noise cancellation, plus EQ and reverb presets adjustable through Hollyland's app. It handles sudden loud noise well thanks to a 120dB SPL rating, avoiding the distortion cheaper mics can suffer at high volume. The magnetic mounting adds a quick-attach option alongside the standard clip. Reviewers note it's especially good for events and conference recording where consistent range and noise handling matter more than raw battery runtime.</p>
             <div class="grid md:grid-cols-2 gap-6 my-8">
                 <div class="bg-pro-bg border border-pro-border p-5 rounded-xl">
-                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Commonly Praised</h3>
+                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Why We Picked It</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">✅</span> 200m range with strong anti-interference performance</li>
                         <li class="flex items-start"><span class="mr-2">✅</span> 3-level noise cancellation plus EQ/reverb presets</li>
@@ -410,17 +449,18 @@
                     </ul>
                 </div>
                 <div class="bg-con-bg border border-con-border p-5 rounded-xl">
-                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Commonly Noted Drawbacks</h3>
+                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Where It Falls Short</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">❌</span> App required to access EQ/reverb customization</li>
                         <li class="flex items-start"><span class="mr-2">❌</span> Combo kit with both receivers can approach the $100 ceiling</li>
                     </ul>
                 </div>
             </div>
-            <p><a href="https://www.amazon.com/dp/B0F31Y1JZ1?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check Hollyland Lark A1 Price on Amazon</a></p>
+            <p><a href="https://www.amazon.com/dp/B0F31Y1JZ1?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live Hollyland Lark A1 Price on Amazon</a></p>
 
-            <h2>Buyer's Guide: What Matters in a Budget Wireless Lav</h2>
-            <p>Three specs separate good budget lav mics from ones you'll regret. <strong>Bit depth</strong> (24-bit vs 16-bit) determines how much audio detail gets captured — 24-bit is noticeably cleaner and easier to edit. <strong>Noise cancellation</strong> matters more than you'd expect, since budget mics are often used in noisy environments where expensive shotgun mics would otherwise be needed. And <strong>total battery life</strong> (transmitter plus charging case combined) is the real endurance number — a transmitter that lasts 6 hours is fine if the case gives you 30+ hours of total runtime across a full day.</p>
+            <h2>Buyer's Guide: What Actually Decides This Purchase</h2>
+            <p>Three specs separate the budget lavs worth owning from the ones you'll replace. <strong>Buy on bit depth first</strong> &mdash; 24-bit versus 16-bit is audibly cleaner and far more forgiving when you push levels in the edit, and it's non-negotiable at this price now that budget mics offer it. <strong>Noise cancellation is second</strong>, and it matters more than the spec sheet suggests: budget lavs get used in exactly the noisy rooms where a pricier shotgun mic would otherwise be required. <strong>Total battery</strong> &mdash; transmitter plus case &mdash; is third, and it's the one people over-weight; a 6-hour transmitter is fine when the case carries 30+ hours across the day.</p>
+            <p><strong>So: buy the BOYA Mini 2</strong> unless you record two people, in which case buy the Hollyland Lark M2. Those two cover the overwhelming majority of creators reading this, and the remaining three on this list are each answers to one narrow problem &mdash; extreme distance, constant device-switching, or unpredictable noise. If none of those three problems is one you actually have, don't buy the mic that solves it.</p>
             <p>If your budget stretches above $100, the <a href="rode-wireless-micro-vs-dji-mic-mini.html">Rode Wireless Micro (~$130) and DJI Mic Mini (~$170)</a> are the next step up — both offer meaningfully better audio quality and build, and we compare them in detail in a separate guide.</p>
 
             <h2>Frequently Asked Questions</h2>
@@ -453,18 +493,83 @@
         </article>
     </main>
 
-    <footer class="bg-primary text-slate-400 py-10 text-center text-sm border-t-4 border-accent mt-16">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-2xl font-extrabold text-white tracking-tight lowercase mb-4">techpicksio<span class="text-accent">.com</span></div>
-            <p class="mb-4 max-w-2xl mx-auto">&copy; 2026 techpicksio.com. All rights reserved. <br> techpicksio.com is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
-            <div class="space-x-4">
-                <a href="about.html" class="hover:text-white transition-colors">About</a>
-                <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a>
-                <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+    <footer class="tpi-footer">
+        <div class="tpi-footer__inner">
+            <div class="tpi-footer__cols">
+                <div>
+                    <div class="tpi-footer__mark">TechPicks<span>IO</span></div>
+                    <p class="m-0" style="max-width:44ch">
+                        Research-based gear guides for mobile filmmakers. Every recommendation is built from
+                        published specifications and manufacturer documentation.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="tpi-footer__head">Categories</div>
+                    <ul class="tpi-footer__list">
+                        <li><a href="index.html#cages">Rigs &amp; Cages</a></li>
+                        <li><a href="index.html#audio">Audio</a></li>
+                        <li><a href="index.html#light">Light &amp; Optics</a></li>
+                        <li><a href="index.html#motion">Motion</a></li>
+                        <li><a href="index.html#data">Drones &amp; Storage</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="tpi-footer__head">Site</div>
+                    <ul class="tpi-footer__list">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
             </div>
+
+            <p class="tpi-footer__legal">
+                &copy; 2026 techpicksio.com. All rights reserved.
+                techpicksio.com is a participant in the Amazon Services LLC Associates Program, an affiliate
+                advertising program designed to provide a means for sites to earn advertising fees by
+                advertising and linking to Amazon.com.
+            </p>
         </div>
     </footer>
+
+
+    <a href="#top" class="tpi-totop" id="tpi-totop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.125rem;height:1.125rem" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </a>
+
+<script>
+/* techpicksio UI — theme toggle + back-to-top. ~20 lines, no dependencies. */
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('tpi-theme-toggle');
+  function sync() {
+    var dark = root.getAttribute('data-theme') === 'dark';
+    if (btn) { btn.setAttribute('aria-pressed', dark ? 'true' : 'false'); }
+  }
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('tpi-theme', next); } catch (e) {}
+      sync();
+    });
+  }
+  sync();
+
+  var top = document.getElementById('tpi-totop');
+  if (top && 'IntersectionObserver' in window) {
+    var sentinel = document.createElement('div');
+    sentinel.style.cssText = 'position:absolute;top:600px;height:1px;width:1px';
+    document.body.appendChild(sentinel);
+    new IntersectionObserver(function (entries) {
+      top.classList.toggle('is-visible', !entries[0].isIntersecting);
+    }).observe(sentinel);
+  }
+})();
+</script>
 
 </body>
 </html>

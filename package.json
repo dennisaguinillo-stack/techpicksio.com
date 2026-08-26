@@ -1,0 +1,11 @@
+{
+  "name": "techpicksio-e2e",
+  "private": true,
+  "description": "Browser smoke tests for techpicksio.com. The site itself has no npm dependency — this is test tooling only, used in CI and for local verification.",
+  "scripts": {
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}

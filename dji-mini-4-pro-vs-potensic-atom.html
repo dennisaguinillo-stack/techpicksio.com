@@ -99,7 +99,7 @@
             "name": "Is the Potensic Atom good enough for beginners?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "It offers a 3-axis gimbal, 4K video, and GPS return-to-home at roughly half the price of the DJI. The main beginner trade-off is obstacle sensing: the Atom senses downward only, while the Mini 4 Pro sees in all directions, which matters if you're worried about crashes."
+                "text": "It's a capable drone for roughly half the price, with a 3-axis gimbal, 4K video and GPS return-to-home. But we'd steer most beginners to the Mini 4 Pro anyway: the Atom senses obstacles downward only, and a beginner's first crash is almost never into the ground. Buy the Atom if your budget genuinely stops below the DJI — not to save money you have."
             }
         },
         {
@@ -107,7 +107,7 @@
             "name": "What is the flight time difference?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The Potensic Atom is rated at around 31 minutes per battery. Both are in a similar range, and real flight time drops in wind or aggressive flying."
+                "text": "The Potensic Atom is rated at around 31 minutes per battery, and both drones sit in a similar range — so don't make flight time your deciding spec. Real-world time drops in wind or aggressive flying regardless of which you buy. Decide on vertical video and obstacle sensing instead; those differences are permanent."
             }
         }
     ]
@@ -116,10 +116,29 @@
 </head>
 <body class="antialiased bg-slate-50">
 
-    <header class="bg-white border-b-2 border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-4xl mx-auto px-4 py-6 text-center">
-            <a href="index.html" class="text-4xl font-extrabold text-primary tracking-tight lowercase no-underline">techpicksio<span class="text-accent">.com</span></a>
-            <div class="text-sm font-medium text-slate-500 mt-1">Curated Gear & Technical Reviews for Mobile Creators</div>
+    <!-- Reading progress: CSS scroll-driven animation, no JavaScript -->
+    <div class="tpi-progress" aria-hidden="true"></div>
+
+    <header class="tpi-header">
+        <div class="tpi-header__bar">
+            <div class="tpi-header__brand">
+                <a href="index.html" class="tpi-wordmark">TechPicks<span>IO</span></a>
+                <div class="tpi-tagline">Curated gear &amp; technical reviews for mobile creators</div>
+            </div>
+
+            <nav class="tpi-nav" aria-label="Gear categories">
+                <a href="index.html#cages">Rigs &amp; Cages</a>
+                <a href="index.html#audio">Audio</a>
+                <a href="index.html#light">Light &amp; Optics</a>
+                <a href="index.html#motion">Motion</a>
+                <a href="index.html#data" aria-current="page">Drones &amp; Storage</a>
+            </nav>
+
+            <button type="button" class="tpi-toggle" id="tpi-theme-toggle"
+                    aria-label="Switch between light and dark theme" aria-pressed="false">
+                <svg class="tpi-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <svg class="tpi-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            </button>
         </div>
     </header>
     <div class="max-w-4xl mx-auto px-4 pt-6">
@@ -138,18 +157,38 @@
             <h1 class="text-3xl md:text-4xl font-extrabold text-primary mb-6 leading-tight mt-0">DJI Mini 4 Pro vs. Potensic Atom: Which Sub-250g Drone Is Best for Creators?</h1>
             <p class="text-sm text-slate-500 mb-6">Last updated: August 24, 2026 &middot; Research-based guide &middot; techpicksio.com</p>
 
-            <p class="lead text-lg text-slate-600 mb-8"><strong>Quick answer:</strong> For creators who want the most capable sub-250g drone, the <strong>DJI Mini 4 Pro</strong> leads on omnidirectional obstacle sensing and native 4K/60fps vertical shooting. The <strong>Potensic Atom</strong> is the stronger budget pick, offering a 3-axis gimbal and 4K video at close to half the price. This comparison is based on published manufacturer specifications and aggregated user reviews, not hands-on flight testing.</p>
+            <p class="lead text-lg text-slate-600 mb-4"><strong>Buy the DJI Mini 4 Pro.</strong> If you post to TikTok or Reels, this isn't close: the Mini 4 Pro physically rotates its gimbal for true full-resolution vertical video, while the Atom makes you crop a horizontal frame and throw away pixels you paid for. Add omnidirectional obstacle sensing — the thing that stops a first flight from ending in a tree — and the extra spend pays for itself the first time it saves the aircraft. <strong>Buy the Potensic Atom only if</strong> your budget genuinely stops below the DJI. It's a capable drone for roughly half the money, but be clear about the trade: you're giving up vertical resolution and crash protection to get there.</p>
+            <p class="text-xs text-slate-400 mb-8"><strong>How we pick:</strong> published manufacturer specifications and aggregated user reviews &mdash; not hands-on flight testing.</p>
 
             <div class="grid grid-cols-2 gap-4 mb-8">
                 <img src="images/dji-mini-4-pro.jpg" width="800" height="693" alt="DJI Mini 4 Pro sub-250g drone" class="w-full h-auto rounded-xl shadow-md object-cover">
                 <img src="images/potensic-atom.jpg" width="800" height="667" alt="Potensic Atom sub-250g budget drone" class="w-full h-auto rounded-xl shadow-md object-cover">
             </div>
 
-            <section class="bg-slate-50 border border-slate-200 border-t-4 border-t-accent p-6 rounded-xl my-8 shadow-sm">
-                <span class="inline-block bg-accent text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wider mb-3">Most Capable Overall</span>
-                <h2 class="mt-0 text-2xl mb-3">DJI Mini 4 Pro</h2>
-                <p class="mb-5 text-slate-700">A lightweight drone whose native vertical video (no resolution loss) makes it especially well-suited to TikTok and Instagram Reels workflows for mobile creators.</p>
-                <a href="https://www.amazon.com/dp/B0CFF38HMJ?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check Price on Amazon</a>
+            <section class="tpi-verdict not-prose" aria-labelledby="verdict-heading">
+                <span class="tpi-badge tpi-badge--pick">Best overall &mdash; sub-250g drone for creators</span>
+                <h2 id="verdict-heading">DJI Mini 4 Pro</h2>
+                <p>The one to buy if you post vertical and can't afford to crash. If your budget genuinely stops short of it, the <strong>Potensic Atom</strong> below is the honest alternative &mdash; not the better drone.</p>
+
+                <dl class="tpi-verdict__grid">
+                    <div class="tpi-fact">
+                        <dt>Vertical video</dt>
+                        <dd>Native, full-res</dd>
+                    </div>
+                    <div class="tpi-fact">
+                        <dt>Obstacle sensing</dt>
+                        <dd>Omnidirectional</dd>
+                    </div>
+                    <div class="tpi-fact">
+                        <dt>Weight</dt>
+                        <dd>&lt;249g (no license*)</dd>
+                    </div>
+                </dl>
+
+                <a href="https://www.amazon.com/dp/B0CFF38HMJ?tag=techpicksio-20" class="tpi-btn tpi-btn--cta" target="_blank" rel="sponsored nofollow noopener">
+                    Check Live Price &amp; Stock on Amazon
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                </a>
             </section>
 
             <h2>Technical Specification Comparison</h2>
@@ -160,13 +199,14 @@
                             <th class="p-4 font-bold text-primary border-b border-slate-200">Feature</th>
                             <th class="p-4 font-bold text-primary border-b border-slate-200">DJI Mini 4 Pro</th>
                             <th class="p-4 font-bold text-primary border-b border-slate-200">Potensic Atom</th>
+                            <th class="p-4 font-bold text-primary border-b border-slate-200">What It Means for You</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td class="p-4 border-b border-slate-100"><strong>Weight</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">&lt;249g</td><td class="p-4 border-b border-slate-100 text-slate-600">&lt;249g</td></tr>
-                        <tr><td class="p-4 border-b border-slate-100"><strong>Max Resolution</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">4K/60fps HDR</td><td class="p-4 border-b border-slate-100 text-slate-600">4K/30fps</td></tr>
-                        <tr><td class="p-4 border-b border-slate-100"><strong>Vertical Shooting</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">Native (true vertical)</td><td class="p-4 border-b border-slate-100 text-slate-600">Digital crop only</td></tr>
-                        <tr><td class="p-4"><strong>Obstacle Sensing</strong></td><td class="p-4 text-slate-600">Omnidirectional</td><td class="p-4 text-slate-600">Downward only</td></tr>
+                        <tr><td class="p-4 border-b border-slate-100"><strong>Weight</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">&lt;249g</td><td class="p-4 border-b border-slate-100 text-slate-600">&lt;249g</td><td class="p-4 border-b border-slate-100 text-slate-600">Both skip the heavier drone registration most countries require at 250g+</td></tr>
+                        <tr><td class="p-4 border-b border-slate-100"><strong>Max Resolution</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">4K/60fps HDR</td><td class="p-4 border-b border-slate-100 text-slate-600">4K/30fps</td><td class="p-4 border-b border-slate-100 text-slate-600">The Mini 4 Pro's 60fps headroom gives you clean slow-motion; the Atom's 30fps is fine for standard-speed social clips</td></tr>
+                        <tr><td class="p-4 border-b border-slate-100"><strong>Vertical Shooting</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">Native (true vertical)</td><td class="p-4 border-b border-slate-100 text-slate-600">Digital crop only</td><td class="p-4 border-b border-slate-100 text-slate-600">Native rotation keeps full 4K detail for Reels; cropping on the Atom throws away resolution you paid for</td></tr>
+                        <tr><td class="p-4"><strong>Obstacle Sensing</strong></td><td class="p-4 text-slate-600">Omnidirectional</td><td class="p-4 text-slate-600">Downward only</td><td class="p-4 text-slate-600">Omnidirectional sensing is the difference between clipping a tree branch and not, if you're still learning to fly</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -199,13 +239,13 @@
 
             <div class="bg-slate-50 border border-slate-200 p-6 rounded-xl my-8">
                 <h3 class="mt-0 mb-3">Which Should You Buy?</h3>
-                <p class="mb-2 text-slate-700"><strong>Buy the DJI Mini 4 Pro</strong> if native vertical video and beginner-friendly obstacle avoidance matter more than price.</p>
+                <p class="mb-2 text-slate-700"><strong>Get the DJI Mini 4 Pro</strong> if native vertical video and beginner-friendly obstacle avoidance matter more than price — it's the safer buy for your first drone.</p>
                 <div class="mb-4">
-                    <a href="https://www.amazon.com/dp/B0CFF38HMJ?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check DJI Price</a>
+                    <a href="https://www.amazon.com/dp/B0CFF38HMJ?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live DJI Mini 4 Pro Price on Amazon</a>
                 </div>
-                <p class="mb-2 text-slate-700"><strong>Buy the Potensic Atom</strong> if you're comfortable cropping for vertical and want the most capability per dollar.</p>
+                <p class="mb-2 text-slate-700"><strong>Get the Potensic Atom</strong> if you're comfortable cropping for vertical and want the most capability per dollar — same core flying experience for roughly half the spend.</p>
                 <div>
-                    <a href="https://www.amazon.com/dp/B0CBLQDJ98?tag=techpicksio-20" class="inline-block bg-white hover:bg-slate-100 text-slate-900 border-2 border-slate-300 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check Potensic Price</a>
+                    <a href="https://www.amazon.com/dp/B0CBLQDJ98?tag=techpicksio-20" class="inline-block bg-white hover:bg-slate-100 text-slate-900 border-2 border-slate-300 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live Potensic Atom Price on Amazon</a>
                 </div>
             </div>
 
@@ -221,11 +261,11 @@
             </div>
             <div class="border-b border-slate-200 py-4">
                 <h3 class="text-lg font-bold text-primary mt-0 mb-2">Is the Potensic Atom good enough for beginners?</h3>
-                <p class="text-slate-700 m-0">It offers a 3-axis gimbal, 4K video, and GPS return-to-home at roughly half the price of the DJI. The main beginner trade-off is obstacle sensing: the Atom senses downward only, while the Mini 4 Pro sees in all directions, which matters if you're worried about crashes.</p>
+                <p class="text-slate-700 m-0">It's a capable drone for roughly half the price, with a 3-axis gimbal, 4K video and GPS return-to-home. But we'd steer most beginners to the Mini 4 Pro anyway: the Atom senses obstacles downward only, and a beginner's first crash is almost never into the ground. Buy the Atom if your budget genuinely stops below the DJI &mdash; not to save money you have.</p>
             </div>
             <div class="border-b border-slate-200 py-4">
                 <h3 class="text-lg font-bold text-primary mt-0 mb-2">What is the flight time difference?</h3>
-                <p class="text-slate-700 m-0">The Potensic Atom is rated at around 31 minutes per battery. Both are in a similar range, and real flight time drops in wind or aggressive flying.</p>
+                <p class="text-slate-700 m-0">The Potensic Atom is rated at around 31 minutes per battery, and both drones sit in a similar range &mdash; so don't make flight time your deciding spec. Real-world time drops in wind or aggressive flying regardless of which you buy. Decide on vertical video and obstacle sensing instead; those differences are permanent.</p>
             </div>
             </div>
 
@@ -238,18 +278,83 @@
         </article>
     </main>
 
-    <footer class="bg-primary text-slate-400 py-10 text-center text-sm border-t-4 border-accent mt-16">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-2xl font-extrabold text-white tracking-tight lowercase mb-4">techpicksio<span class="text-accent">.com</span></div>
-            <p class="mb-4 max-w-2xl mx-auto">&copy; 2026 techpicksio.com. All rights reserved. <br> techpicksio.com is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
-            <div class="space-x-4">
-                <a href="about.html" class="hover:text-white transition-colors">About</a>
-                <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a>
-                <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+    <footer class="tpi-footer">
+        <div class="tpi-footer__inner">
+            <div class="tpi-footer__cols">
+                <div>
+                    <div class="tpi-footer__mark">TechPicks<span>IO</span></div>
+                    <p class="m-0" style="max-width:44ch">
+                        Research-based gear guides for mobile filmmakers. Every recommendation is built from
+                        published specifications and manufacturer documentation.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="tpi-footer__head">Categories</div>
+                    <ul class="tpi-footer__list">
+                        <li><a href="index.html#cages">Rigs &amp; Cages</a></li>
+                        <li><a href="index.html#audio">Audio</a></li>
+                        <li><a href="index.html#light">Light &amp; Optics</a></li>
+                        <li><a href="index.html#motion">Motion</a></li>
+                        <li><a href="index.html#data">Drones &amp; Storage</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="tpi-footer__head">Site</div>
+                    <ul class="tpi-footer__list">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
             </div>
+
+            <p class="tpi-footer__legal">
+                &copy; 2026 techpicksio.com. All rights reserved.
+                techpicksio.com is a participant in the Amazon Services LLC Associates Program, an affiliate
+                advertising program designed to provide a means for sites to earn advertising fees by
+                advertising and linking to Amazon.com.
+            </p>
         </div>
     </footer>
+
+
+    <a href="#top" class="tpi-totop" id="tpi-totop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.125rem;height:1.125rem" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </a>
+
+<script>
+/* techpicksio UI — theme toggle + back-to-top. ~20 lines, no dependencies. */
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('tpi-theme-toggle');
+  function sync() {
+    var dark = root.getAttribute('data-theme') === 'dark';
+    if (btn) { btn.setAttribute('aria-pressed', dark ? 'true' : 'false'); }
+  }
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('tpi-theme', next); } catch (e) {}
+      sync();
+    });
+  }
+  sync();
+
+  var top = document.getElementById('tpi-totop');
+  if (top && 'IntersectionObserver' in window) {
+    var sentinel = document.createElement('div');
+    sentinel.style.cssText = 'position:absolute;top:600px;height:1px;width:1px';
+    document.body.appendChild(sentinel);
+    new IntersectionObserver(function (entries) {
+      top.classList.toggle('is-visible', !entries[0].isIntersecting);
+    }).observe(sentinel);
+  }
+})();
+</script>
 
 </body>
 </html>

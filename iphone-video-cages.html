@@ -221,12 +221,29 @@
 </head>
 <body class="antialiased bg-slate-50">
 
-    <header class="bg-white border-b-2 border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-4xl mx-auto px-4 py-6 text-center">
-            <a href="index.html" class="text-4xl font-extrabold text-primary tracking-tight lowercase no-underline">
-                techpicksio<span class="text-accent">.com</span>
-            </a>
-            <div class="text-sm font-medium text-slate-500 mt-1">Curated Gear & Technical Reviews for Mobile Creators</div>
+    <!-- Reading progress: CSS scroll-driven animation, no JavaScript -->
+    <div class="tpi-progress" aria-hidden="true"></div>
+
+    <header class="tpi-header">
+        <div class="tpi-header__bar">
+            <div class="tpi-header__brand">
+                <a href="index.html" class="tpi-wordmark">TechPicks<span>IO</span></a>
+                <div class="tpi-tagline">Curated gear &amp; technical reviews for mobile creators</div>
+            </div>
+
+            <nav class="tpi-nav" aria-label="Gear categories">
+                <a href="index.html#cages" aria-current="page">Rigs &amp; Cages</a>
+                <a href="index.html#audio">Audio</a>
+                <a href="index.html#light">Light &amp; Optics</a>
+                <a href="index.html#motion">Motion</a>
+                <a href="index.html#data">Drones &amp; Storage</a>
+            </nav>
+
+            <button type="button" class="tpi-toggle" id="tpi-theme-toggle"
+                    aria-label="Switch between light and dark theme" aria-pressed="false">
+                <svg class="tpi-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <svg class="tpi-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            </button>
         </div>
     </header>
     <div class="max-w-4xl mx-auto px-4 pt-6">
@@ -248,11 +265,33 @@
             <h1 class="text-3xl md:text-4xl font-extrabold text-primary mb-6 leading-tight mt-0">5 Best Phone Video Cages for Mobile Filmmaking (2026)</h1>
             <p class="text-sm text-slate-500 mb-6">Last updated: August 24, 2026 &middot; Research-based guide &middot; techpicksio.com</p>
 
-            <section class="bg-slate-50 border border-slate-200 border-t-4 border-t-accent p-6 rounded-xl my-8 shadow-sm">
-                <span class="inline-block bg-accent text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wider mb-3">Highest-Rated Pick</span>
-                <h2 class="mt-0 text-2xl mb-3">Neewer Universal Phone Cage Video Rig</h2>
-                <p class="mb-5 text-slate-700">For mobile filmmakers who want dual handgrips and a Bluetooth shutter without spending a lot, the <strong>Neewer Universal Phone Cage Video Rig</strong> stands out in this roundup. It adjusts to fit most modern phones, includes a wireless shutter trigger, and holds a 4.6-star rating across hundreds of Amazon reviews.</p>
-                <a href="https://www.amazon.com/dp/B0CXXJTJXB?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check Price on Amazon</a>
+            <p class="lead text-lg text-slate-600 mb-4"><strong>Buy the Neewer Universal Phone Cage.</strong> It fits nearly any modern phone, throws in a Bluetooth shutter most rivals charge extra for, and carries the strongest review record in this roundup at 4.6 stars across hundreds of buyers. For the overwhelming majority of creators that's the end of the decision. The other four earn their place only in specific cases — a MagSafe iPhone workflow, a dual-handle grip, or a quick-release plate — and we say exactly which case each one wins below.</p>
+            <p class="text-xs text-slate-400 mb-8"><strong>How we pick:</strong> published manufacturer specifications and aggregated user reviews &mdash; not hands-on testing.</p>
+
+            <section class="tpi-verdict not-prose" aria-labelledby="verdict-heading">
+                <span class="tpi-badge tpi-badge--pick">Best overall &mdash; iPhone video cage</span>
+                <h2 id="verdict-heading">Neewer Universal Phone Cage Video Rig</h2>
+                <p>The one to buy for most creators, most of the time. The Bluetooth shutter alone is worth it if you appear on camera &mdash; you'll stop nudging the phone every take.</p>
+
+                <dl class="tpi-verdict__grid">
+                    <div class="tpi-fact">
+                        <dt>Mount type</dt>
+                        <dd>Adjustable clamp</dd>
+                    </div>
+                    <div class="tpi-fact">
+                        <dt>Standout feature</dt>
+                        <dd>Bluetooth shutter</dd>
+                    </div>
+                    <div class="tpi-fact">
+                        <dt>Rating</dt>
+                        <dd>4.6★ (hundreds of reviews)</dd>
+                    </div>
+                </dl>
+
+                <a href="https://www.amazon.com/dp/B0CXXJTJXB?tag=techpicksio-20" class="tpi-btn tpi-btn--cta" target="_blank" rel="sponsored nofollow noopener">
+                    Check Live Price &amp; Stock on Amazon
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                </a>
             </section>
 
             <h2>Top Phone Video Cages Compared</h2>
@@ -271,31 +310,31 @@
                             <td class="p-4 font-semibold text-primary">Neewer Universal Phone Cage</td>
                             <td class="p-4 text-slate-600">Adjustable Clamp</td>
                             <td class="p-4 text-slate-600">Bluetooth Shutter Trigger</td>
-                            <td class="p-4 text-center"><a href="https://www.amazon.com/dp/B0CXXJTJXB?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-4 py-2 rounded font-bold text-xs" target="_blank" rel="sponsored nofollow">View Deal</a></td>
+                            <td class="p-4 text-center"><a href="https://www.amazon.com/dp/B0CXXJTJXB?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-4 py-2 rounded font-bold text-xs" target="_blank" rel="sponsored nofollow noopener">Check Live Price</a></td>
                         </tr>
                         <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                             <td class="p-4 font-semibold text-primary">Zeadio Aluminum Video Cage Rig</td>
                             <td class="p-4 text-slate-600">Adjustable Clamp</td>
                             <td class="p-4 text-slate-600">Triple Cold-Shoe Mounts</td>
-                            <td class="p-4 text-center"><a href="https://www.amazon.com/dp/B0GLMXWJY3?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-4 py-2 rounded font-bold text-xs" target="_blank" rel="sponsored nofollow">View Deal</a></td>
+                            <td class="p-4 text-center"><a href="https://www.amazon.com/dp/B0GLMXWJY3?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-4 py-2 rounded font-bold text-xs" target="_blank" rel="sponsored nofollow noopener">Check Live Price</a></td>
                         </tr>
                         <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                             <td class="p-4 font-semibold text-primary">Zeadio T-Grip Video Rig</td>
                             <td class="p-4 text-slate-600">Adjustable Clamp</td>
                             <td class="p-4 text-slate-600">T-Shaped Handheld Grip</td>
-                            <td class="p-4 text-center"><a href="https://www.amazon.com/dp/B0D7Q2TDW3?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-4 py-2 rounded font-bold text-xs" target="_blank" rel="sponsored nofollow">View Deal</a></td>
+                            <td class="p-4 text-center"><a href="https://www.amazon.com/dp/B0D7Q2TDW3?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-4 py-2 rounded font-bold text-xs" target="_blank" rel="sponsored nofollow noopener">Check Live Price</a></td>
                         </tr>
                         <tr class="border-b border-slate-100 hover:bg-slate-50 transition-colors">
                             <td class="p-4 font-semibold text-primary">Ulanzi Universal Phone Video Rig Kit</td>
                             <td class="p-4 text-slate-600">Adjustable Clamp</td>
                             <td class="p-4 text-slate-600">Dual Handles + Cold Shoe</td>
-                            <td class="p-4 text-center"><a href="https://www.amazon.com/dp/B0BTYDLRYX?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-4 py-2 rounded font-bold text-xs" target="_blank" rel="sponsored nofollow">View Deal</a></td>
+                            <td class="p-4 text-center"><a href="https://www.amazon.com/dp/B0BTYDLRYX?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-4 py-2 rounded font-bold text-xs" target="_blank" rel="sponsored nofollow noopener">Check Live Price</a></td>
                         </tr>
                         <tr>
                             <td class="p-4 font-semibold text-primary">SmallRig Quick Release Phone Cage Kit</td>
                             <td class="p-4 text-slate-600">Quick-Release Clamp + MagSafe</td>
                             <td class="p-4 text-slate-600">Wireless Control Handles</td>
-                            <td class="p-4 text-center"><a href="https://www.amazon.com/dp/B0DCBCVFT2?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-4 py-2 rounded font-bold text-xs" target="_blank" rel="sponsored nofollow">View Deal</a></td>
+                            <td class="p-4 text-center"><a href="https://www.amazon.com/dp/B0DCBCVFT2?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-4 py-2 rounded font-bold text-xs" target="_blank" rel="sponsored nofollow noopener">Check Live Price</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -305,7 +344,7 @@
             <p>All five cages on this list use adjustable clamp mounts, which means they work with <strong>both iPhones and Android phones</strong> (Samsung Galaxy, Pixel, OnePlus, etc.) regardless of whether your phone supports MagSafe. The key spec to check is the clamp's width range — large phones like the Galaxy S25 Ultra or iPhone 16 Pro Max in a thick case need a wide clamp (typically 80mm+). If you have an iPhone and want even faster snap-on mounting, consider a MagSafe-specific cage like the <a href="rode-phone-cage-review.html">Rode Phone Cage</a> — but you'll sacrifice Android compatibility entirely.</p>
 
             <h2>Neewer Universal Phone Cage Deep-Dive</h2>
-            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> The Neewer Universal Phone Cage is an adjustable-clamp phone cage whose defining feature is an included Bluetooth shutter trigger, letting you start and stop recording without touching the phone. It pairs dual contoured side handles with a top cold shoe for a mic or light. Best for solo creators who film themselves and need remote recording control.</p>
+            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> <strong>Our pick, and the one to buy unless something below applies.</strong> The Bluetooth shutter is the feature that actually changes how you shoot: you start and stop recording without touching &mdash; and nudging &mdash; the phone, which matters enormously when you're the one in front of it. Dual contoured handles and a top cold shoe cover the rest. <strong>Skip it if</strong> you need MagSafe quick-release or a premium metal build.</p>
             <img loading="lazy" src="images/neewer-phone-cage.jpg" width="800" height="784" alt="Neewer Universal Phone Cage Video Rig with Bluetooth shutter and side handles" class="w-full h-auto rounded-xl my-6 shadow-sm border border-slate-200">
 
             <p>Mobile video capture in 4K ProRes demands steady framing and quick accessory switching. The Neewer cage's adjustable clamp fits a wide range of phone sizes, and reviewers consistently point to the two ergonomic side handles as a meaningful improvement for handheld walking shots over holding a bare phone. A cold-shoe mount on top lets you add a light or microphone without needing a separate rig.</p>
@@ -327,10 +366,10 @@
                     </ul>
                 </div>
             </div>
-            <p><a href="https://www.amazon.com/dp/B0CXXJTJXB?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check Neewer Phone Cage Price on Amazon</a></p>
+            <p><a href="https://www.amazon.com/dp/B0CXXJTJXB?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live Neewer Phone Cage Price on Amazon</a></p>
 
             <h2>Zeadio Aluminum Video Cage Rig</h2>
-            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> The Zeadio Aluminum Video Cage Rig is a full-metal phone cage built around three cold-shoe mounting points spread across the top and sides. The aluminum frame is structurally more rigid than plastic-clamp designs when loaded with accessories. Best for creators running a microphone and an LED light simultaneously.</p>
+            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> <strong>Buy this if you're loading the cage up.</strong> Three cold shoes across the top and sides, in a full-metal frame that doesn't flex with a mic and a light both hanging off it &mdash; plastic-clamp cages visibly bend under that load. <strong>Skip it if</strong> you run a single accessory: you'd be paying for rigidity you never stress.</p>
             <img loading="lazy" src="images/zeadio-aluminum-cage.jpg" width="800" height="608" alt="Zeadio Aluminum Video Cage Rig with dual handles and triple cold-shoe mounts" class="w-full h-auto rounded-xl my-6 shadow-sm border border-slate-200">
             <p>The Zeadio Aluminum Video Cage Rig trades plastic for a full metal frame, which gives it more structural rigidity on paper when you've got a shotgun mic and an LED light both mounted at once. Three cold-shoe points spread across the top and sides give you more flexibility for accessory placement than a single center mount, and the adjustable clamp handles most phone-plus-case combos without needing to strip the case off first.</p>
             <div class="grid md:grid-cols-2 gap-6 my-8">
@@ -350,10 +389,10 @@
                     </ul>
                 </div>
             </div>
-            <p><a href="https://www.amazon.com/dp/B0GLMXWJY3?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check Zeadio Aluminum Cage Price on Amazon</a></p>
+            <p><a href="https://www.amazon.com/dp/B0GLMXWJY3?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live Zeadio Aluminum Cage Price on Amazon</a></p>
 
             <h2>Zeadio T-Grip Video Rig</h2>
-            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> The Zeadio T-Grip Video Rig is a single-handle phone rig using a T-shaped bottom grip modeled on traditional camcorder handling, rather than dual side handles. It is the most affordable option in this roundup and carries one cold-shoe mount. Best for creators who operate a second piece of gear with their free hand.</p>
+            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> <strong>Buy this if one hand needs to stay free.</strong> The T-shaped camcorder-style grip is genuinely more comfortable one-handed than dual side handles, which counts when your other hand is holding a light or opening a door. It's also the cheapest option here. <strong>Skip it if</strong> stability is the priority &mdash; two hands on a cage will always beat one.</p>
             <img loading="lazy" src="images/zeadio-t-grip.jpg" width="800" height="893" alt="Zeadio T-Grip Video Rig with camcorder-style handheld grip" class="w-full h-auto rounded-xl my-6 shadow-sm border border-slate-200">
             <p>Instead of dual side handles, the T-Grip uses a single bottom handle in a T shape, closer to how you'd hold a traditional camcorder. That single-hand-friendly layout makes it a good pick if you're regularly operating gear with your other hand, like a gimbal or a slate. It's the simplest, most affordable rig on this list, so accessory mounting is more limited than the cage-style options above.</p>
             <div class="grid md:grid-cols-2 gap-6 my-8">
@@ -373,10 +412,10 @@
                     </ul>
                 </div>
             </div>
-            <p><a href="https://www.amazon.com/dp/B0D7Q2TDW3?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check Zeadio T-Grip Price on Amazon</a></p>
+            <p><a href="https://www.amazon.com/dp/B0D7Q2TDW3?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live Zeadio T-Grip Price on Amazon</a></p>
 
             <h2>Ulanzi Universal Phone Video Rig Kit</h2>
-            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> The Ulanzi Universal Phone Video Rig Kit is an all-in-one phone rig bundling dual handles with a cold shoe on each side, plus additional accessories depending on kit variant. Its value case is covering stabilization and mounting in a single purchase. Best for beginners who do not yet own a separate light or microphone.</p>
+            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> <strong>Buy this if you own nothing else yet.</strong> It's the only option here that bundles stabilization and mounting in one purchase, so a beginner ends up with a working rig instead of three separate orders and a compatibility gamble. <strong>Skip it if</strong> you already own a light and a mic &mdash; you'd be paying a second time for mounts you have.</p>
             <img loading="lazy" src="images/ulanzi-rig-kit.jpg" width="800" height="753" alt="Ulanzi Universal Phone Video Rig Kit with dual handles" class="w-full h-auto rounded-xl my-6 shadow-sm border border-slate-200">
             <p>Ulanzi's kit leans into "everything included" value: dual handles, a cold shoe on each side, and typically a small tripod or clamp bundled in depending on the kit variant. It's a solid starting point if you don't already own a light or mic and want one purchase that covers stabilization and mounting at once, though the individual components tend to feel less premium than buying a dedicated cage plus separate accessories.</p>
             <div class="grid md:grid-cols-2 gap-6 my-8">
@@ -396,10 +435,10 @@
                     </ul>
                 </div>
             </div>
-            <p><a href="https://www.amazon.com/dp/B0BTYDLRYX?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check Ulanzi Rig Kit Price on Amazon</a></p>
+            <p><a href="https://www.amazon.com/dp/B0BTYDLRYX?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live Ulanzi Rig Kit Price on Amazon</a></p>
 
             <h2>SmallRig Quick Release Phone Cage Kit</h2>
-            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> The SmallRig Quick Release Phone Cage Kit is a premium phone cage whose defining feature is a MagSafe-compatible quick-release plate that seats and removes a phone in seconds. It includes wireless control handles and sits at the highest price point in this roundup. Best for creators switching frequently between handheld and tripod shots.</p>
+            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> <strong>Buy this if you're constantly moving between handheld and tripod.</strong> The MagSafe quick-release plate seats and removes the phone in seconds; make that switch a dozen times a shoot and it buys back real time. It is also the most expensive cage here. <strong>Skip it if</strong> your phone stays mounted all session &mdash; that's a premium for a problem you don't have.</p>
             <img loading="lazy" src="images/smallrig-cage-kit.jpg" width="800" height="808" alt="SmallRig Universal Quick Release Phone Cage Kit" class="w-full h-auto rounded-xl my-6 shadow-sm border border-slate-200">
             <p>SmallRig is a familiar name from full-size camera cages, and this kit brings that same quick-release philosophy to phones: a MagSafe-compatible quick-release plate lets you pop your phone in and out of the cage in seconds, which matters if you're switching between handheld and tripod shots often. It's priced closer to the premium end of this list, but the build quality and included wireless control handles reflect that.</p>
             <div class="grid md:grid-cols-2 gap-6 my-8">
@@ -419,7 +458,7 @@
                     </ul>
                 </div>
             </div>
-            <p><a href="https://www.amazon.com/dp/B0DCBCVFT2?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check SmallRig Cage Kit Price on Amazon</a></p>
+            <p><a href="https://www.amazon.com/dp/B0DCBCVFT2?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live SmallRig Cage Kit Price on Amazon</a></p>
 
 
             <h2>Frequently Asked Questions</h2>
@@ -453,20 +492,83 @@
         </article>
     </main>
 
-    <footer class="bg-primary text-slate-400 py-10 text-center text-sm border-t-4 border-accent">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-2xl font-extrabold text-white tracking-tight lowercase mb-4">
-                techpicksio<span class="text-accent">.com</span>
+    <footer class="tpi-footer">
+        <div class="tpi-footer__inner">
+            <div class="tpi-footer__cols">
+                <div>
+                    <div class="tpi-footer__mark">TechPicks<span>IO</span></div>
+                    <p class="m-0" style="max-width:44ch">
+                        Research-based gear guides for mobile filmmakers. Every recommendation is built from
+                        published specifications and manufacturer documentation.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="tpi-footer__head">Categories</div>
+                    <ul class="tpi-footer__list">
+                        <li><a href="index.html#cages">Rigs &amp; Cages</a></li>
+                        <li><a href="index.html#audio">Audio</a></li>
+                        <li><a href="index.html#light">Light &amp; Optics</a></li>
+                        <li><a href="index.html#motion">Motion</a></li>
+                        <li><a href="index.html#data">Drones &amp; Storage</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="tpi-footer__head">Site</div>
+                    <ul class="tpi-footer__list">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
             </div>
-            <p class="mb-4 max-w-2xl mx-auto">&copy; 2026 techpicksio.com. All rights reserved. <br> techpicksio.com is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
-            <div class="space-x-4">
-                <a href="about.html" class="hover:text-white transition-colors">About</a>
-                <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a>
-                <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
-            </div>
+
+            <p class="tpi-footer__legal">
+                &copy; 2026 techpicksio.com. All rights reserved.
+                techpicksio.com is a participant in the Amazon Services LLC Associates Program, an affiliate
+                advertising program designed to provide a means for sites to earn advertising fees by
+                advertising and linking to Amazon.com.
+            </p>
         </div>
     </footer>
+
+
+    <a href="#top" class="tpi-totop" id="tpi-totop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.125rem;height:1.125rem" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </a>
+
+<script>
+/* techpicksio UI — theme toggle + back-to-top. ~20 lines, no dependencies. */
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('tpi-theme-toggle');
+  function sync() {
+    var dark = root.getAttribute('data-theme') === 'dark';
+    if (btn) { btn.setAttribute('aria-pressed', dark ? 'true' : 'false'); }
+  }
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('tpi-theme', next); } catch (e) {}
+      sync();
+    });
+  }
+  sync();
+
+  var top = document.getElementById('tpi-totop');
+  if (top && 'IntersectionObserver' in window) {
+    var sentinel = document.createElement('div');
+    sentinel.style.cssText = 'position:absolute;top:600px;height:1px;width:1px';
+    document.body.appendChild(sentinel);
+    new IntersectionObserver(function (entries) {
+      top.classList.toggle('is-visible', !entries[0].isIntersecting);
+    }).observe(sentinel);
+  }
+})();
+</script>
 
 </body>
 </html>

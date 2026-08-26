@@ -155,7 +155,7 @@
             "name": "Can I plug any USB-C SSD into my iPhone?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Most USB-C SSDs will connect, but power draw and sustained speed vary. Drives with lower power consumption are easier on phone battery, and a drive that throttles under heat can interrupt a recording even if it connects fine."
+                "text": "Most will connect — but connecting is not the bar. Power draw and sustained speed vary wildly, and a drive that throttles under heat will interrupt a recording even though it mounted fine. Don't gamble a shoot on an untested drive: buy one of the three here, or at minimum one with a published sustained-write figure."
             }
         },
         {
@@ -172,10 +172,29 @@
 </head>
 <body class="antialiased bg-slate-50">
 
-    <header class="bg-white border-b-2 border-slate-200 sticky top-0 z-50 shadow-sm">
-        <div class="max-w-4xl mx-auto px-4 py-6 text-center">
-            <a href="index.html" class="text-4xl font-extrabold text-primary tracking-tight lowercase no-underline">techpicksio<span class="text-accent">.com</span></a>
-            <div class="text-sm font-medium text-slate-500 mt-1">Curated Gear & Technical Reviews for Mobile Creators</div>
+    <!-- Reading progress: CSS scroll-driven animation, no JavaScript -->
+    <div class="tpi-progress" aria-hidden="true"></div>
+
+    <header class="tpi-header">
+        <div class="tpi-header__bar">
+            <div class="tpi-header__brand">
+                <a href="index.html" class="tpi-wordmark">TechPicks<span>IO</span></a>
+                <div class="tpi-tagline">Curated gear &amp; technical reviews for mobile creators</div>
+            </div>
+
+            <nav class="tpi-nav" aria-label="Gear categories">
+                <a href="index.html#cages">Rigs &amp; Cages</a>
+                <a href="index.html#audio">Audio</a>
+                <a href="index.html#light">Light &amp; Optics</a>
+                <a href="index.html#motion">Motion</a>
+                <a href="index.html#data" aria-current="page">Drones &amp; Storage</a>
+            </nav>
+
+            <button type="button" class="tpi-toggle" id="tpi-theme-toggle"
+                    aria-label="Switch between light and dark theme" aria-pressed="false">
+                <svg class="tpi-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <svg class="tpi-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            </button>
         </div>
     </header>
     <div class="max-w-4xl mx-auto px-4 pt-6">
@@ -194,15 +213,35 @@
             <h1 class="text-3xl md:text-4xl font-extrabold text-primary mb-6 leading-tight mt-0">5 Best External SSDs for ProRes 4K Mobile Video Capture (2026)</h1>
             <p class="text-sm text-slate-500 mb-6">Last updated: August 24, 2026 &middot; Research-based guide &middot; techpicksio.com</p>
 
-            <p class="lead text-lg text-slate-600 mb-8"><strong>Quick answer:</strong> For recording 4K ProRes footage directly from a smartphone, the <strong>Samsung T7 Shield</strong> is the most widely recommended all-round pick. Its rated sustained write speeds (~1,000 MB/s), IP65 rugged rating, and reputation for stable performance during long recordings make it a safe default. This is a research-based comparison drawn from manufacturer specifications and aggregated user reviews, not a hands-on test.</p>
+            <p class="lead text-lg text-slate-600 mb-4"><strong>Buy the Samsung T7 Shield.</strong> The failure that actually ruins a ProRes shoot isn't a slow drive — it's a drive that heats up mid-take, throttles, and drops frames. The T7 Shield's ~1,000 MB/s sustained write and IP65 rubberized shell are built for exactly that scenario, and it's the drive to strap to a rig without thinking twice about it. <strong>Get the 2TB</strong> if you shoot ProRes more than occasionally — 4K ProRes eats a 1TB drive far faster than most creators expect, and running out mid-shoot costs more than the upgrade did.</p>
+            <p class="text-xs text-slate-400 mb-8"><strong>How we pick:</strong> published manufacturer specifications and aggregated user reviews &mdash; not hands-on testing.</p>
 
             <img src="images/samsung-t7-shield.jpg" width="800" height="692" alt="Samsung T7 Shield portable SSD, top pick for ProRes mobile video" class="w-full h-auto rounded-xl mb-8 shadow-md object-cover" style="max-width:420px;">
 
-            <section class="bg-slate-50 border border-slate-200 border-t-4 border-t-accent p-6 rounded-xl my-8 shadow-sm">
-                <span class="inline-block bg-accent text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wider mb-3">Best Overall ProRes Drive</span>
-                <h2 class="mt-0 text-2xl mb-3">Samsung T7 Shield (1TB / 2TB)</h2>
-                <p class="mb-5 text-slate-700">Combining a rubberized protective shell with fast rated write speeds, the Samsung T7 Shield is a popular choice for mobile filmmakers recording high-bitrate ProRes outdoors.</p>
-                <a href="https://www.amazon.com/dp/B09VLK9W3S?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check Price on Amazon</a>
+            <section class="tpi-verdict not-prose" aria-labelledby="verdict-heading">
+                <span class="tpi-badge tpi-badge--pick">Best overall &mdash; 4K ProRes mobile recording</span>
+                <h2 id="verdict-heading">Samsung T7 Shield (1TB / 2TB)</h2>
+                <p>The one to buy if a dropped or overheating drive would cost you the take. Get the 2TB and stop thinking about storage for a year.</p>
+
+                <dl class="tpi-verdict__grid">
+                    <div class="tpi-fact">
+                        <dt>Sustained write</dt>
+                        <dd>~1,000 MB/s</dd>
+                    </div>
+                    <div class="tpi-fact">
+                        <dt>Rugged rating</dt>
+                        <dd>IP65 water/dust</dd>
+                    </div>
+                    <div class="tpi-fact">
+                        <dt>Capacity</dt>
+                        <dd>1TB / 2TB</dd>
+                    </div>
+                </dl>
+
+                <a href="https://www.amazon.com/dp/B09VLK9W3S?tag=techpicksio-20" class="tpi-btn tpi-btn--cta" target="_blank" rel="sponsored nofollow noopener">
+                    Check Live Price &amp; Stock on Amazon
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                </a>
             </section>
 
             <h2>Top Mobile ProRes SSDs Compared</h2>
@@ -221,19 +260,19 @@
                             <td class="p-4 border-b border-slate-100"><strong>Samsung T7 Shield</strong></td>
                             <td class="p-4 border-b border-slate-100 text-slate-600">1,050 / 1,000 MB/s</td>
                             <td class="p-4 border-b border-slate-100 text-slate-600">IP65 water/dust</td>
-                            <td class="p-4 border-b border-slate-100"><a href="https://www.amazon.com/dp/B09VLK9W3S?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow">View Deal</a></td>
+                            <td class="p-4 border-b border-slate-100"><a href="https://www.amazon.com/dp/B09VLK9W3S?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow noopener">Check Live Price</a></td>
                         </tr>
                         <tr>
                             <td class="p-4 border-b border-slate-100"><strong>Crucial X9 Pro</strong></td>
                             <td class="p-4 border-b border-slate-100 text-slate-600">1,050 / 1,050 MB/s</td>
                             <td class="p-4 border-b border-slate-100 text-slate-600">IP55 & dropproof</td>
-                            <td class="p-4 border-b border-slate-100"><a href="https://www.amazon.com/dp/B0C9WKGXHD?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow">View Deal</a></td>
+                            <td class="p-4 border-b border-slate-100"><a href="https://www.amazon.com/dp/B0C9WKGXHD?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow noopener">Check Live Price</a></td>
                         </tr>
                         <tr>
                             <td class="p-4"><strong>SanDisk Extreme Portable</strong></td>
                             <td class="p-4 text-slate-600">1,050 / 1,000 MB/s</td>
                             <td class="p-4 text-slate-600">IP65 dust/water</td>
-                            <td class="p-4"><a href="https://www.amazon.com/dp/B08HN37XC1?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow">View Deal</a></td>
+                            <td class="p-4"><a href="https://www.amazon.com/dp/B08HN37XC1?tag=techpicksio-20" class="text-accent font-semibold hover:underline" target="_blank" rel="sponsored nofollow noopener">Check Live Price</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -244,12 +283,12 @@
 
             <h2>Detailed Breakdown</h2>
             <h3>1. Samsung T7 Shield — best all-rounder</h3>
-            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> The Samsung T7 Shield is a rugged portable SSD rated at 1,050 MB/s read and 1,000 MB/s write with an IP65 water and dust rating. Its dynamic thermal management is designed to hold sustained write speed during long recordings rather than throttling as it heats. Best for creators shooting long 4K ProRes takes outdoors.</p>
+            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> <strong>Our pick &mdash; buy this one unless something below applies to you.</strong> Sustained write is the spec that matters here, not peak burst: a drive that throttles as it warms will drop frames twenty minutes into a take, and the T7 Shield's thermal management exists specifically to stop that. IP65 means a wet, dusty location day doesn't end your shoot.</p>
             <img loading="lazy" src="images/samsung-t7-shield.jpg" width="800" height="692" alt="Samsung T7 Shield portable SSD" class="w-full h-auto rounded-xl my-6 shadow-sm border border-slate-200" style="max-width:420px;">
             <p>To record 4K ProRes at 60fps reliably, a drive needs to hold a high continuous write speed without thermal drop-offs. The T7 Shield's dynamic thermal management and rugged elastomer shell are the two features most often cited in reviews as making it dependable for outdoor, long-take work.</p>
             <div class="grid md:grid-cols-2 gap-6 my-8">
                 <div class="bg-pro-bg border border-pro-border p-5 rounded-xl">
-                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Commonly Praised</h3>
+                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Why We Picked It</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">✅</span> Strong thermal performance over long takes</li>
                         <li class="flex items-start"><span class="mr-2">✅</span> Rugged shell rated for drops (per Samsung)</li>
@@ -257,22 +296,22 @@
                     </ul>
                 </div>
                 <div class="bg-con-bg border border-con-border p-5 rounded-xl">
-                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Commonly Noted Drawbacks</h3>
+                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Where It Falls Short</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">❌</span> Larger footprint than minimalist micro-SSDs</li>
                         <li class="flex items-start"><span class="mr-2">❌</span> Rubber coating attracts pocket lint</li>
                     </ul>
                 </div>
             </div>
-            <p><a href="https://www.amazon.com/dp/B09VLK9W3S?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check Samsung T7 Shield Price on Amazon</a></p>
+            <p><a href="https://www.amazon.com/dp/B09VLK9W3S?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live Samsung T7 Shield Price on Amazon</a></p>
 
             <h3>2. Crucial X9 Pro — best for gimbal setups</h3>
-            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> The Crucial X9 Pro is a compact portable SSD rated at 1,050 MB/s both read and write, measuring roughly 2.5 x 2.0 inches and weighing about 38g. Its small footprint fits standard cold-shoe SSD clamps without disturbing rig balance. Best for creators mounting storage directly on a gimbal or lightweight rig.</p>
+            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> <strong>Buy this one if it's going on a gimbal.</strong> At ~38g and 2.5 x 2.0 inches, it's the only drive here that clamps to a balance-sensitive rig without upsetting your gimbal's calibration, and write speed matches the larger drives. <strong>Skip it if</strong> you shoot in weather: IP55 is a real step down from IP65, and it runs warm on long writes.</p>
             <img loading="lazy" src="images/crucial-x9-pro.jpg" width="674" height="600" alt="Crucial X9 Pro portable SSD" class="w-full h-auto rounded-xl my-6 shadow-sm border border-slate-200" style="max-width:420px;">
             <p>If you're mounting the drive on a gimbal or a lightweight rig where balance is delicate, the X9 Pro's compact size (~2.5 x 2.0 inches) and low weight (~38g) are its main advantage. It slips into standard cold-shoe SSD clamps easily.</p>
             <div class="grid md:grid-cols-2 gap-6 my-8">
                 <div class="bg-pro-bg border border-pro-border p-5 rounded-xl">
-                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Commonly Praised</h3>
+                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Why We Picked It</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">✅</span> Compact and lightweight for rig mounting</li>
                         <li class="flex items-start"><span class="mr-2">✅</span> Rated write speeds match larger drives</li>
@@ -280,22 +319,22 @@
                     </ul>
                 </div>
                 <div class="bg-con-bg border border-con-border p-5 rounded-xl">
-                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Commonly Noted Drawbacks</h3>
+                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Where It Falls Short</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">❌</span> Lower water-resistance rating than the T7 Shield</li>
                         <li class="flex items-start"><span class="mr-2">❌</span> Reported to run warm during long writes</li>
                     </ul>
                 </div>
             </div>
-            <p><a href="https://www.amazon.com/dp/B0C9WKGXHD?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check Crucial X9 Pro Price on Amazon</a></p>
+            <p><a href="https://www.amazon.com/dp/B0C9WKGXHD?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live Crucial X9 Pro Price on Amazon</a></p>
 
             <h3>3. SanDisk Extreme Portable — best brand trust</h3>
-            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> The SanDisk Extreme Portable is a long-established rugged SSD rated at 1,050 MB/s read and 1,000 MB/s write with IP65 water and dust resistance. Its main advantage is an extensive long-term user feedback record compared to newer entrants. Best for creators who prefer a drive with a proven track record.</p>
+            <p class="dab text-slate-800 bg-slate-50 border-l-4 border-accent px-4 py-3 rounded-r-lg my-4"><strong>Quick take:</strong> <strong>Buy this if you'd rather own the known quantity.</strong> Speeds and the IP65 rating track the T7 Shield closely; what you're really paying for is years of long-term field reports instead of a newer drive's shorter record. <strong>Skip it if</strong> you shoot marathon takes &mdash; thermal throttling on sustained writes is the most consistent complaint against it, and that's the exact failure the T7 Shield engineered around.</p>
             <img loading="lazy" src="images/sandisk-extreme.jpg" width="652" height="1500" alt="SanDisk 2TB Extreme Portable SSD" class="w-full h-auto rounded-xl my-6 shadow-sm border border-slate-200" style="max-width:420px;">
             <p>The SanDisk Extreme Portable is one of the longest-running names in rugged portable storage, and that track record is its main advantage. IP65 water and dust resistance matches the T7 Shield, and read/write speeds are competitive. It's the safe pick if you trust the SanDisk ecosystem and want a drive with extensive long-term user feedback available.</p>
             <div class="grid md:grid-cols-2 gap-6 my-8">
                 <div class="bg-pro-bg border border-pro-border p-5 rounded-xl">
-                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Commonly Praised</h3>
+                    <h3 class="text-pro-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👍</span> Why We Picked It</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">✅</span> Established brand with long track record</li>
                         <li class="flex items-start"><span class="mr-2">✅</span> IP65 water and dust resistance</li>
@@ -303,14 +342,14 @@
                     </ul>
                 </div>
                 <div class="bg-con-bg border border-con-border p-5 rounded-xl">
-                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Commonly Noted Drawbacks</h3>
+                    <h3 class="text-con-text mt-0 mb-3 flex items-center"><span class="text-xl mr-2">👎</span> Where It Falls Short</h3>
                     <ul class="list-none p-0 m-0 space-y-2 text-sm text-slate-700">
                         <li class="flex items-start"><span class="mr-2">❌</span> Some users report thermal throttling on sustained long writes</li>
                         <li class="flex items-start"><span class="mr-2">❌</span> Included cable is short</li>
                     </ul>
                 </div>
             </div>
-            <p><a href="https://www.amazon.com/dp/B08HN37XC1?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow">Check SanDisk Extreme Price on Amazon</a></p>
+            <p><a href="https://www.amazon.com/dp/B08HN37XC1?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">Check Live SanDisk Extreme Price on Amazon</a></p>
 
             <h2>Frequently Asked Questions</h2>
             <div class="not-prose my-6">
@@ -324,7 +363,7 @@
             </div>
             <div class="border-b border-slate-200 py-4">
                 <h3 class="text-lg font-bold text-primary mt-0 mb-2">Can I plug any USB-C SSD into my iPhone?</h3>
-                <p class="text-slate-700 m-0">Most USB-C SSDs will connect, but power draw and sustained speed vary. Drives with lower power consumption are easier on phone battery, and a drive that throttles under heat can interrupt a recording even if it connects fine.</p>
+                <p class="text-slate-700 m-0">Most will connect &mdash; but connecting is not the bar. Power draw and sustained speed vary wildly, and a drive that throttles under heat will interrupt a recording even though it mounted fine. Don't gamble a shoot on an untested drive: buy one of the three here, or at minimum one with a published sustained-write figure.</p>
             </div>
             <div class="border-b border-slate-200 py-4">
                 <h3 class="text-lg font-bold text-primary mt-0 mb-2">Which SSD is best for mounting on a gimbal?</h3>
@@ -343,18 +382,83 @@
         </article>
     </main>
 
-    <footer class="bg-primary text-slate-400 py-10 text-center text-sm border-t-4 border-accent mt-16">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-2xl font-extrabold text-white tracking-tight lowercase mb-4">techpicksio<span class="text-accent">.com</span></div>
-            <p class="mb-4 max-w-2xl mx-auto">&copy; 2026 techpicksio.com. All rights reserved. <br> techpicksio.com is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
-            <div class="space-x-4">
-                <a href="about.html" class="hover:text-white transition-colors">About</a>
-                <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a>
-                <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+    <footer class="tpi-footer">
+        <div class="tpi-footer__inner">
+            <div class="tpi-footer__cols">
+                <div>
+                    <div class="tpi-footer__mark">TechPicks<span>IO</span></div>
+                    <p class="m-0" style="max-width:44ch">
+                        Research-based gear guides for mobile filmmakers. Every recommendation is built from
+                        published specifications and manufacturer documentation.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="tpi-footer__head">Categories</div>
+                    <ul class="tpi-footer__list">
+                        <li><a href="index.html#cages">Rigs &amp; Cages</a></li>
+                        <li><a href="index.html#audio">Audio</a></li>
+                        <li><a href="index.html#light">Light &amp; Optics</a></li>
+                        <li><a href="index.html#motion">Motion</a></li>
+                        <li><a href="index.html#data">Drones &amp; Storage</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="tpi-footer__head">Site</div>
+                    <ul class="tpi-footer__list">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
             </div>
+
+            <p class="tpi-footer__legal">
+                &copy; 2026 techpicksio.com. All rights reserved.
+                techpicksio.com is a participant in the Amazon Services LLC Associates Program, an affiliate
+                advertising program designed to provide a means for sites to earn advertising fees by
+                advertising and linking to Amazon.com.
+            </p>
         </div>
     </footer>
+
+
+    <a href="#top" class="tpi-totop" id="tpi-totop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.125rem;height:1.125rem" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </a>
+
+<script>
+/* techpicksio UI — theme toggle + back-to-top. ~20 lines, no dependencies. */
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('tpi-theme-toggle');
+  function sync() {
+    var dark = root.getAttribute('data-theme') === 'dark';
+    if (btn) { btn.setAttribute('aria-pressed', dark ? 'true' : 'false'); }
+  }
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('tpi-theme', next); } catch (e) {}
+      sync();
+    });
+  }
+  sync();
+
+  var top = document.getElementById('tpi-totop');
+  if (top && 'IntersectionObserver' in window) {
+    var sentinel = document.createElement('div');
+    sentinel.style.cssText = 'position:absolute;top:600px;height:1px;width:1px';
+    document.body.appendChild(sentinel);
+    new IntersectionObserver(function (entries) {
+      top.classList.toggle('is-visible', !entries[0].isIntersecting);
+    }).observe(sentinel);
+  }
+})();
+</script>
 
 </body>
 </html>
