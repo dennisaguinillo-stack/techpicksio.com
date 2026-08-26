@@ -488,6 +488,20 @@ h2[id], h3[id] { scroll-margin-top: 6.5rem; }
 }
 .tpi-badge--pick { background-color: rgb(var(--cta)); color: rgb(var(--cta-ink)); }
 
+/* --- 4.5b Pending product photo ------------------------------------------
+   Stands in for an <img> when no real product photo exists yet — e.g. an
+   editorial pick without a sourced ASIN. Never a generated placeholder
+   image: a labeled empty box is honest about missing content in a way a
+   fake photo isn't. */
+.tpi-img-pending {
+  display: flex; align-items: center; justify-content: center;
+  aspect-ratio: 2 / 1; border-radius: var(--radius);
+  background-color: rgb(var(--surface-2)); border: 1px dashed rgb(var(--line));
+  color: rgb(var(--muted)); font-size: 0.875rem; font-weight: 600;
+  margin-bottom: 2rem;
+}
+.tpi-img-pending--secondary { aspect-ratio: 16 / 9; margin: 1.5rem 0; }
+
 /* --- 4.6 Verdict box (above-the-fold direct answer) ---------------------- */
 .tpi-verdict {
   border: 1px solid rgb(var(--line)); border-top: 4px solid rgb(var(--accent-fg));
