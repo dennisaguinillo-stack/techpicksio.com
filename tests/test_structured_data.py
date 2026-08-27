@@ -124,7 +124,10 @@ def test_review_body_appears_in_the_visible_copy(filename):
 
 
 @pytest.mark.parametrize("filename", PAGES)
-def test_itemlist_entries_are_positioned_products(filename):
+def test_itemlist_entries_are_named_and_positioned(filename):
+    """Both schema.org ItemList forms are allowed: a nested `item` node (used by
+    the product roundups) or a ListItem carrying its own name (used by the
+    ranked how-to lists). Either way every entry needs a name and a position."""
     for lst in _of_type(filename, "ItemList"):
         elements = lst.get("itemListElement", [])
         assert elements, f"{filename}: ItemList {lst.get('name')!r} is empty"
@@ -135,9 +138,8 @@ def test_itemlist_entries_are_positioned_products(filename):
             assert element.get("position") == i, (
                 f"{filename}: ItemList entry #{i} has position {element.get('position')!r}"
             )
-            assert element.get("item", {}).get("name"), (
-                f"{filename}: ItemList entry #{i} wraps no named item"
-            )
+            name = element.get("name") or element.get("item", {}).get("name")
+            assert name, f"{filename}: ItemList entry #{i} has no name"
 
 
 # ---------------------------------------------------------------------------

@@ -898,6 +898,45 @@ a.inline-block.mt-2,
 }
 .tpi-byline__links a:hover { text-decoration: underline; }
 
+/* --- 4.13c Checklist ---------------------------------------------------------
+   A list the reader is meant to work down and, on the gear checklist page,
+   physically tick off on paper. The empty square is drawn rather than being a
+   real checkbox: a checkbox implies state the page cannot save, and an unsaved
+   control that silently forgets what you clicked is worse than a printed box.
+
+   Rows are given the same left rail as the pros/cons list so the three
+   list-shaped components on the site read as one family. */
+.tpi-checklist {
+  list-style: none; margin: 1.25rem 0; padding: 0;
+  display: flex; flex-direction: column; gap: 0.625rem;
+}
+.tpi-checklist li {
+  display: flex; gap: 0.75rem; align-items: flex-start;
+  background-color: rgb(var(--surface-2));
+  border: 1px solid rgb(var(--line));
+  border-radius: 0.625rem;
+  padding: 0.75rem 0.9375rem;
+  font-size: 0.9375rem; line-height: 1.6; color: rgb(var(--body));
+}
+.tpi-checklist li svg {
+  flex: none; width: 1.125rem; height: 1.125rem; margin-top: 0.15rem;
+  color: rgb(var(--accent-fg));
+}
+.tpi-checklist strong { color: rgb(var(--ink)); }
+.tpi-checklist a { color: rgb(var(--accent-fg)); font-weight: 600; }
+
+/* --- 4.13d Silo uplink -------------------------------------------------------
+   One quiet line under each verdict box pointing a first-time buyer back up to
+   the starter-kit hub. It is deliberately the least prominent element in that
+   part of the page: the reader who already knows they want a cage should not
+   have their eye pulled off the recommendation they came for. Muted text, no
+   panel, no icon — only the link itself carries accent colour. */
+.tpi-uplink {
+  margin: 1.25rem 0 0;
+  font-size: 0.875rem; line-height: 1.6; color: rgb(var(--muted));
+}
+.tpi-uplink a { color: rgb(var(--accent-fg)); font-weight: 600; }
+
 /* --- 4.14 Footer --------------------------------------------------------- */
 .tpi-footer {
   background-color: rgb(var(--footer-bg)); color: #94a3b8;
@@ -999,6 +1038,18 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 @media print {
   .tpi-header, .tpi-stickybar, .tpi-totop, .tpi-progress, .tpi-toc, .tpi-toc-mobile,
-  .tpi-skip { display: none !important; }
+  .tpi-skip, .tpi-ftc, .tpi-byline, .tpi-badge, .tpi-footer { display: none !important; }
   body { background: #fff; color: #000; }
+
+  /* The gear checklist is meant to leave the browser on paper. Drop the card
+     chrome so the list itself is what prints, keep the drawn boxes tickable,
+     and stop a row from being split across a page break. */
+  article { border: 0 !important; box-shadow: none !important; padding: 0 !important; }
+  .tpi-checklist li {
+    background: #fff; border: 1px solid #999;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .tpi-checklist li svg { color: #000; }
+  .tpi-verdict, .tpi-table-wrap, .tpi-faq details { break-inside: avoid; page-break-inside: avoid; }
+  a[href]::after { content: ""; }
 }
