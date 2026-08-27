@@ -231,3 +231,97 @@ def test_llms_txt_lists_every_page_in_the_sitemap():
     listed = {u.lstrip("/") for u in re.findall(r"\]\((/[^)]*)\)", body)}
     missing = [p for p in PAGES if p != "index.html" and p not in listed]
     assert not missing, f"pages missing from llms.txt: {missing}"
+
+
+# ---------------------------------------------------------------------------
+# Syndication feed
+# ---------------------------------------------------------------------------
+
+def _feed():
+    import xml.etree.ElementTree as ET
+    return ET.parse(f"{ROOT}/feed.xml").getroot().find("channel")
+
+
+FEED_NS = {
+    "content": "http://purl.org/rss/1.0/modules/content/",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "media": "http://search.yahoo.com/mrss/",
+    "atom": "http://www.w3.org/2005/Atom",
+}
+
+
+def test_feed_channel_carries_the_fields_msn_requires():
+    channel = _feed()
+    for tag in ("title", "link", "description", "language", "lastBuildDate", "copyright"):
+        element = channel.find(tag)
+        assert element is not None and (element.text or "").strip(), (
+            f"feed.xml: channel is missing <{tag}>"
+        )
+    self_link = channel.find("atom:link", FEED_NS)
+    assert self_link is not None and self_link.get("rel") == "self", (
+        "feed.xml: channel is missing its atom:link rel=self"
+    )
+
+
+def test_feed_items_are_complete():
+    items = _feed().findall("item")
+    assert items, "feed.xml: no items"
+    for item in items:
+        title = item.findtext("title", "")
+        for tag in ("title", "link", "guid", "description", "pubDate", "category"):
+            assert (item.findtext(tag) or "").strip(), f"feed.xml: {title!r} is missing <{tag}>"
+        assert (item.findtext("content:encoded", "", FEED_NS)).strip(), (
+            f"feed.xml: {title!r} has no content:encoded — MSN rejects thin feeds"
+        )
+        assert (item.findtext("dc:creator", "", FEED_NS)).strip(), (
+            f"feed.xml: {title!r} has no dc:creator"
+        )
+        assert item.find("media:content", FEED_NS) is not None, (
+            f"feed.xml: {title!r} has no media:content image"
+        )
+
+
+def test_feed_bodies_carry_the_affiliate_disclosure():
+    """A syndicated body is a commercial link leaving this domain."""
+    for item in _feed().findall("item"):
+        body = item.findtext("content:encoded", "", FEED_NS)
+        assert "Amazon Services LLC Associates Program" in body, (
+            f"feed.xml: {item.findtext('title')!r} carries no affiliate disclosure"
+        )
+
+
+def test_feed_bodies_have_no_relative_urls():
+    """A relative link breaks the moment a partner renders the body."""
+    for item in _feed().findall("item"):
+        body = item.findtext("content:encoded", "", FEED_NS)
+        for attr, value in re.findall(r'\b(href|src)="([^"]+)"', body):
+            assert value.startswith(("https://", "http://", "mailto:", "#", "data:")), (
+                f"feed.xml: {item.findtext('title')!r} has a relative {attr}={value!r}"
+            )
+
+
+def test_feed_covers_every_article_page():
+    links = {item.findtext("link") for item in _feed().findall("item")}
+    import xml.etree.ElementTree as ET
+    missing = []
+    for filename in PAGES:
+        with open(f"{ROOT}/{filename}", encoding="utf-8") as f:
+            source = f.read()
+        # Only pages with an <article> and a verdict or checklist body syndicate.
+        if "<article" not in source or filename in {
+            "about.html", "contact.html", "privacy-policy.html",
+            "terms-of-service.html", "methodology.html", "index.html",
+        }:
+            continue
+        if canonical_url_for(filename) not in links:
+            missing.append(filename)
+    assert not missing, f"feed.xml is missing article pages: {missing}"
+
+
+@pytest.mark.parametrize("filename", PAGES)
+def test_feed_is_discoverable_from_every_page(filename):
+    page = parse(filename)
+    assert any(
+        l.get("rel") == "alternate" and l.get("type") == "application/rss+xml"
+        for l in page.link
+    ), f"{filename}: no <link rel=\"alternate\" type=\"application/rss+xml\">"
