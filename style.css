@@ -847,6 +847,57 @@ a.inline-block.mt-2,
 }
 .tpi-ftc svg { flex: none; width: 1.125rem; height: 1.125rem; margin-top: 0.1rem; }
 
+/* --- 4.13b Editorial byline --------------------------------------------------
+   E-E-A-T block that closes every article. techpicksio.com has no named
+   reviewer and does not test hardware in-house, so the byline is attributed
+   to the publication rather than to an invented person, and the monogram
+   stands in for the head-shot a first-party reviewer would carry. Inventing
+   either would be exactly the kind of manufactured authority signal that
+   references/compliance.md forbids.
+
+   Its job is to state the sourcing plainly and hand the reader the
+   methodology page, which is what both a human assessor and a generative
+   engine look for when deciding how much weight the recommendation carries. */
+.tpi-byline {
+  display: flex; gap: 1rem; align-items: flex-start;
+  margin: 2.5rem 0 0;
+  padding: 1.125rem 1.25rem;
+  background-color: rgb(var(--surface-2));
+  border: 1px solid rgb(var(--line));
+  border-radius: var(--radius);
+}
+.tpi-byline__mark {
+  flex: none;
+  display: grid; place-items: center;
+  width: 3rem; height: 3rem;
+  border-radius: 0.75rem;
+  background-color: rgb(var(--accent));
+  color: #fff;
+  font-size: 0.9375rem; font-weight: 800; letter-spacing: -0.02em;
+}
+.tpi-byline__name {
+  margin: 0 0 0.25rem;
+  font-size: 0.9375rem; font-weight: 700; color: rgb(var(--ink));
+}
+.tpi-byline__role {
+  margin: 0; font-size: 0.8125rem; line-height: 1.6; color: rgb(var(--body));
+}
+.tpi-byline__links {
+  /* The 44px tap floor applies here too: these are the two links that carry a
+     reader from a recommendation to the sourcing behind it, and they sit in a
+     block that is otherwise all small type. Each anchor is given the height
+     rather than the row, and the top margin is pulled back by the padding the
+     anchors add, so the block does not grow taller than it reads. */
+  margin: 0.25rem 0 -0.625rem; font-size: 0.8125rem; color: rgb(var(--muted));
+  display: flex; flex-wrap: wrap; align-items: center;
+  column-gap: 1.5rem; row-gap: 0;
+}
+.tpi-byline__links a {
+  display: inline-flex; align-items: center; min-height: 2.75rem;
+  color: rgb(var(--accent-fg)); font-weight: 600; text-decoration: none;
+}
+.tpi-byline__links a:hover { text-decoration: underline; }
+
 /* --- 4.14 Footer --------------------------------------------------------- */
 .tpi-footer {
   background-color: rgb(var(--footer-bg)); color: #94a3b8;
