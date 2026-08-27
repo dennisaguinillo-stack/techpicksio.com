@@ -1,0 +1,109 @@
+CONTENT CREATOR GEAR CHECKLIST
+techpicksio.com  ·  last updated 27 August 2026
+Full guide: https://www.techpicksio.com/content-creator-gear-checklist.html
+
+techpicksio.com is an Amazon Associate and earns from qualifying purchases
+through links on the site. This checklist contains no links and costs nothing.
+
+
+-------------------------------------------------------------------------
+STEP 1 — MEASURE THESE FOUR THINGS FIRST
+-------------------------------------------------------------------------
+These decide whether the gear you buy physically fits the phone you own.
+
+[ ] Phone width and length in MILLIMETRES, WITH YOUR CASE ON.
+        width  ______ mm      length ______ mm
+    Cage clamp ranges are stated in mm. A phone that fits bare often
+    does not fit cased — this is the most common reason gear goes back.
+
+[ ] Your phone's connector:      [ ] USB-C      [ ] Lightning
+    A microphone with the wrong connector is unusable until an adapter
+    arrives.
+
+[ ] Does your phone have a MagSafe magnet ring?    [ ] Yes   [ ] No
+    iPhones do. Android phones do not. This single fact rules half the
+    cage market in or out.
+
+[ ] How long does a typical shoot run for you?  ______ minutes
+    This is the number that decides whether a microphone's battery life
+    and a light's runtime are actually adequate.
+
+
+-------------------------------------------------------------------------
+STEP 2 — THE FOUR ESSENTIALS, IN BUYING ORDER
+-------------------------------------------------------------------------
+Each one is more useful once the one above it is in place, so working
+down the list never leaves anything sitting in a drawer.
+
+[ ] 1. A phone that shoots 4K
+       Almost certainly the one in your pocket. Do not upgrade it to
+       improve video — the money goes further everywhere else here.
+
+[ ] 2. A wireless lavalier microphone
+       The largest single improvement available for the money. Check:
+       connector, battery life per charge, transmitter weight.
+
+[ ] 3. A cage or grip that fits your measured width
+       Steadies framing and gives the mic and light somewhere to mount.
+       Check: clamp range in mm vs. your cased measurement.
+
+[ ] 4. One pocket LED light
+       Choose on CRI, not brightness. CRI decides whether skin tones
+       look right; most pocket panels are used well below full output.
+
+
+-------------------------------------------------------------------------
+STEP 3 — WORTH ADDING NEXT
+-------------------------------------------------------------------------
+[ ] A tripod or stand — move this to #2 if you film yourself alone.
+[ ] An ND filter, if you shoot outdoors. It is what lets you hold a
+    cinematic shutter angle in daylight.
+[ ] Fast external storage, once you record in high-bitrate formats.
+    Sustained write speed is the only spec that matters.
+[ ] A spare cable and a power bank. Unglamorous, and the two things
+    most likely to end a shoot early.
+
+
+-------------------------------------------------------------------------
+STEP 4 — LEAVE THESE FOR LATER
+-------------------------------------------------------------------------
+Not bad purchases. Badly timed ones.
+
+[ ] A gimbal — revisit when handheld movement genuinely limits a shot
+    you want to make. It costs more than the first three purchases
+    combined and adds a balancing step before every shoot.
+[ ] A drone — revisit when aerial shots are part of your format. Check
+    take-off weight against local registration rules first.
+[ ] Anamorphic or add-on lenses — revisit once your footage is already
+    well lit and well framed.
+[ ] A camera body — revisit when a shot you need is impossible, not
+    when footage merely feels unpolished.
+
+
+-------------------------------------------------------------------------
+STEP 5 — BEFORE YOUR FIRST SHOOT
+-------------------------------------------------------------------------
+[ ] Phone clamped in the cage FIRST, tightened evenly from both sides
+    so it does not sit crooked in the frame.
+[ ] Microphone on the TOP cold shoe, not the side. A side mount can end
+    up aimed at your own hand.
+[ ] LED light set to 30-40% output to start. Phone sensors handle
+    highlights poorly and this is almost always enough.
+[ ] Cables routed through the cage's channels BEFORE you shoot.
+[ ] A 10-second test clip, walking normally, played back on headphones.
+    Catches loose screws, cable rattle and clipped audio while they are
+    still easy to fix.
+
+
+-------------------------------------------------------------------------
+Typical street-price bands at the time of writing (categories, not
+quoted product prices — check current prices before buying):
+
+    wireless lavalier mic .......... $60-$100
+    cage or grip ................... $30-$70
+    tripod or stand ................ $20-$50
+    pocket LED light ............... $40-$80
+    ND filter or fast storage ...... $30-$120
+
+Full guides, comparisons and the reasoning behind this order:
+https://www.techpicksio.com/content-creator-starter-kit.html

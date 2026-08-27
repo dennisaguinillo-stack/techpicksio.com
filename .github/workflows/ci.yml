@@ -33,6 +33,15 @@ jobs:
       - name: Every class used in HTML resolves in style.css
         run: python3 check-classes.py
 
+      - name: feed.xml matches the pages on disk
+        run: |
+          cp feed.xml /tmp/feed.before.xml
+          python3 generate_feed.py
+          # Compare item URLs only — lastBuildDate changes on every run.
+          grep -o '<link>[^<]*</link>' /tmp/feed.before.xml | sort > /tmp/before.feed
+          grep -o '<link>[^<]*</link>' feed.xml | sort > /tmp/after.feed
+          diff -u /tmp/before.feed /tmp/after.feed
+
       - name: sitemap.xml covers every .html file on disk
         run: |
           cp sitemap.xml /tmp/sitemap.before.xml

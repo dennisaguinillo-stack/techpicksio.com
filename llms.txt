@@ -1,20 +1,48 @@
 # TechPicksIO
 
-> Spec-first buying guides for mobile filmmaking gear: rigs, mics, lighting,
-> gimbals, drones and storage for iPhone and Android creators. Recommendations
-> are built from published specs, measured weights and hands-on testing —
-> not marketing copy. We are an Amazon Associate and earn from qualifying
-> purchases (full disclosure: /disclosure).
+> Spec-first buying guides for mobile filmmaking gear: cages and rigs, wireless
+> microphones, LED lighting, gimbals, drones, lenses, filters and storage for
+> iPhone and Android creators. Every recommendation is built from published
+> manufacturer specifications, official product documentation and a synthesis of
+> verified customer and expert reviews — techpicksio.com is a research site and
+> does not claim hands-on testing of the products it covers, and publishes no
+> rating or score of its own. techpicksio.com is an Amazon Associate and earns
+> from qualifying purchases; every commercial link is marked as sponsored and a
+> disclosure appears above the first one on every page.
 
-## Guides
-- [5 Best Phone Video Cages (2026)](/best-phone-video-cages/): tested weight,
-  compatibility, mounting points
-- [Rode Wireless Micro vs. DJI Mic Mini](/rode-vs-dji-mic/): head-to-head spec
-  and audio-quality comparison
-- [5 Best Wireless Lavalier Mics Under $100](/best-lav-mics-under-100/)
-[... one line per guide, plain-language description of what the page answers ...]
+## Start here (new creators)
+- [The Content Creator Starter Kit: What Gear You Actually Need (2026)](/content-creator-starter-kit.html): the four-piece minimum kit, what each piece fixes, the order to buy in, and what to skip
+- [First 5 Purchases for a New Content Creator, Ranked by Impact](/first-5-purchases-new-creator.html): mic, cage, tripod, light, then ND filter or storage — ranked by what the audience notices, with the reasoning for the order
+- [How Much Does It Cost to Start Content Creation in 2026?](/cost-to-start-content-creation.html): what $0, $150 and $400 each buy, where the money goes inside a starter budget, and the costs beginners forget
+- [Phone-Only Content Creation: Can You Really Skip the Camera?](/phone-only-content-creation.html): where a phone genuinely wins, the three places it runs out of road, and the accessories that close the gap
+- [Content Creator Gear Checklist (Free Printable)](/content-creator-gear-checklist.html): four measurements to take before buying, the essentials in order, and what to leave for later
 
-## About
-- [Methodology](/methodology/): how we test and score gear
-- [About](/about/)
-- [Disclosure](/disclosure/)
+## Rigs & cages
+- [5 Best Phone Video Cages for Mobile Filmmaking (2026)](/iphone-video-cages.html): which clamp-style cage to buy for iPhone or Android, compared on clamp range, mounting points and cold shoes
+- [5 Best MagSafe Video Cages for iPhone (2026)](/magsafe-video-cages.html): MagSafe-mount rigs compared on mount type, safety locks and included handles; when magnetic beats mechanical
+- [5 Best Universal Video Cages for Samsung & Android (2026)](/universal-android-video-cages.html): why MagSafe does not work on Android, and which clamp range fits a Galaxy S25 Ultra with a case on
+- [Rode Phone Cage Review](/rode-phone-cage-review.html): whether the 33-mount aluminium MagSafe cage is worth it, and who is paying for modularity they will not use
+- [Budget iPhone Cinematic Rig Under $150](/budget-iphone-rig-under-150.html): step-by-step build of a cage + mic + light kit under $150, with what each part contributes
+
+## Audio
+- [5 Best Wireless Lavalier Mics Under $100](/best-wireless-lavalier-mics-under-100.html): budget wireless lav systems compared on transmitter weight, battery life, range and phone connector type
+- [Rode Wireless Micro vs. DJI Mic Mini](/rode-wireless-micro-vs-dji-mic-mini.html): head-to-head on range, runtime, onboard recording and which phone ecosystem each suits
+
+## Light & optics
+- [5 Best Budget LED Video Lights for Mobile Creators](/best-budget-led-video-lights.html): pocket RGB and bi-colour panels compared on CRI, colour temperature range and battery runtime at full output
+- [Best ND Filters & Anamorphic Lenses for Phone Video](/phone-lenses-nd-filters-mobile-video.html): which ND stop range holds a cinematic shutter angle, and what anamorphic adapters actually change
+
+## Motion
+- [DJI Osmo Mobile 6 Review](/dji-osmo-mobile-6-review.html): payload, folded size and phone-width range, and whether a gimbal replaces a cage
+- [Drone-Like Overhead Shots With an Extended Monopod](/cinematic-monopod-overhead-shots.html): how to get high-angle moving shots without a drone, and which extended poles reach far enough
+
+## Drones & storage
+- [DJI Mini 4 Pro vs. Potensic Atom](/dji-mini-4-pro-vs-potensic-atom.html): sub-250g drones compared on sensor, bitrate, flight time and transmission range
+- [5 Best External SSDs for ProRes 4K Mobile Video](/best-portable-ssds-prores.html): which sustained write speeds record ProRes without dropped frames, and which interface your phone actually supports
+
+## About this site
+- [Methodology](/methodology.html): the sources behind every guide, the specs compared in each category, and the claims this site refuses to make
+- [About techpicksio.com](/about.html): who runs the site, how products are chosen for coverage, and how the site makes money
+- [Contact](/contact.html): corrections, coverage requests and partnership enquiries
+- [Privacy Policy](/privacy-policy.html): data handling, cookies and the full affiliate-link disclosure
+- [Terms of Service](/terms-of-service.html): terms governing use of the site
