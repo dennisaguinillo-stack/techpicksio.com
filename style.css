@@ -68,6 +68,13 @@
   --shadow-color:  15 23 42;
   --shadow-strength: 0.06;
 
+  /* Product photo plate — see 4.15. Light theme is a deliberate no-op:
+     the plate is the card colour and brightness is unchanged. */
+  --plate:            255 255 255;
+  --plate-ring:       226 232 240;
+  --plate-pad:        0.75rem;
+  --plate-brightness: 1;
+
   /* Scale */
   --measure: 68ch;              /* 65–75 character reading column */
   --radius:  0.875rem;
@@ -120,6 +127,10 @@
   --ftc-border:  245 158  11;
   --ftc-text:    252 211  77;
 
+  --plate:      255 255 255;
+  --plate-ring:    39  51  68;
+  --plate-pad:    0.75rem;
+  --plate-brightness: 0.88;
   --footer-bg:    13  17  24;
   --footer-accent: 56 189 248;
   --header-bg:    14  19  27;
@@ -157,6 +168,10 @@
     --ftc-border:  245 158  11;
     --ftc-text:    252 211  77;
 
+    --plate:            255 255 255;
+    --plate-ring:        39  51  68;
+    --plate-pad:        0.75rem;
+    --plate-brightness: 0.88;
     --footer-bg:    13  17  24;
     --footer-accent: 56 189 248;
     --header-bg:    14  19  27;
@@ -452,6 +467,12 @@ h2[id], h3[id] { scroll-margin-top: 6.5rem; }
 }
 .tpi-card__media { position: relative; aspect-ratio: 16 / 10; background-color: rgb(var(--surface-2)); }
 .tpi-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Card thumbnails are cropped fills in a fixed 16/10 box, not matted cutouts,
+   so they take the plate's dimming (see 4.15) but none of its geometry —
+   padding or object-fit here would inflate the media box and break the row's
+   alignment. Two-class selector so it wins over .tpi-plate if both ever land
+   on the same image. */
+.tpi-card__media img { filter: brightness(var(--plate-brightness)); }
 .tpi-card__body { padding: 1.125rem 1.25rem 1.375rem; display: flex; flex-direction: column; flex: 1 1 auto; }
 .tpi-card__title {
   margin: 0.625rem 0 0.5rem; font-size: 1.0625rem; font-weight: 700; line-height: 1.35;
@@ -868,6 +889,35 @@ a.inline-block.mt-2,
    focus ring around the entire content column would read as a rendering bug
    rather than as feedback. This is the one place an outline is suppressed. */
 main[tabindex="-1"]:focus { outline: none; }
+
+/* --- 4.15 Product photo plate ---------------------------------------------
+   Every product shot in the library is a white-background cutout — measured
+   border luminance 247-255 across all 31 files, no lifestyle shots. On the
+   light theme those sit invisibly on a white card. On the dark theme a raw
+   cutout is a 255-white rectangle punched into a near-black page, and it is
+   the one place the cinematic treatment visibly breaks.
+
+   The plate makes that rectangle deliberate rather than accidental: the
+   cutout is matted onto neutral paper of the same tone, given a hairline
+   edge, and dimmed in dark mode so it reads as lit paper instead of a light
+   box. Because the mat and the cutout background are the same white, the
+   join is seamless and the dimming applies to both at once — there is no
+   inner rectangle. object-fit is contain so the mat can never crop or
+   squash the product, which matters on an affiliate page where the photo is
+   the product claim.
+
+   Padding is identical in both themes so toggling the theme never reflows an
+   image; only the ring colour and the brightness change.
+
+   Applies to article images only. Card thumbnails are handled in 4.4 with
+   the dimming alone — see the note there. */
+.tpi-plate {
+  background-color: rgb(var(--plate));
+  padding: var(--plate-pad);
+  object-fit: contain;
+  border: 1px solid rgb(var(--plate-ring));
+  filter: brightness(var(--plate-brightness));
+}
 
 /* ==========================================================================
    5. MOTION, FOCUS & PRINT
