@@ -465,7 +465,14 @@ h2[id], h3[id] { scroll-margin-top: 6.5rem; }
   border-color: rgb(var(--accent-fg) / 0.45);
   box-shadow: 0 14px 30px -12px rgb(var(--shadow-color) / calc(var(--shadow-strength) * 2.2));
 }
-.tpi-card__media { position: relative; aspect-ratio: 16 / 10; background-color: rgb(var(--surface-2)); }
+.tpi-card__media {
+  position: relative; aspect-ratio: 16 / 10; background-color: rgb(var(--surface-2));
+  /* min-height: 0 defeats the flexbox "automatic minimum size": as a flex item in
+     .tpi-card's column layout, this box would otherwise ignore its own aspect-ratio
+     for any photo intrinsically taller than 16:10 and grow to fit the image's natural
+     size instead, breaking row alignment. Confirmed on 8 of 12 homepage thumbnails. */
+  min-height: 0;
+}
 .tpi-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 /* Card thumbnails are cropped fills in a fixed 16/10 box, not matted cutouts,
    so they take the plate's dimming (see 4.15) but none of its geometry —
