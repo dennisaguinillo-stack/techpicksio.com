@@ -1,0 +1,20 @@
+# TechPicksIO
+
+> Spec-first buying guides for mobile filmmaking gear: rigs, mics, lighting,
+> gimbals, drones and storage for iPhone and Android creators. Recommendations
+> are built from published specs, measured weights and hands-on testing —
+> not marketing copy. We are an Amazon Associate and earn from qualifying
+> purchases (full disclosure: /disclosure).
+
+## Guides
+- [5 Best Phone Video Cages (2026)](/best-phone-video-cages/): tested weight,
+  compatibility, mounting points
+- [Rode Wireless Micro vs. DJI Mic Mini](/rode-vs-dji-mic/): head-to-head spec
+  and audio-quality comparison
+- [5 Best Wireless Lavalier Mics Under $100](/best-lav-mics-under-100/)
+[... one line per guide, plain-language description of what the page answers ...]
+
+## About
+- [Methodology](/methodology/): how we test and score gear
+- [About](/about/)
+- [Disclosure](/disclosure/)
