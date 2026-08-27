@@ -37,7 +37,6 @@ import html
 import json
 import os
 import re
-import subprocess
 from datetime import datetime, timezone
 from email.utils import format_datetime
 
@@ -96,25 +95,23 @@ def jsonld(source: str) -> list[dict]:
     return out
 
 
-def git_first_commit_date(filename: str) -> datetime | None:
-    """The date the page entered the repo — the honest pubDate for older pages
-    whose JSON-LD only records a dateModified."""
-    try:
-        stamp = subprocess.run(
-            ["git", "log", "--diff-filter=A", "--follow", "--format=%aI", "--", filename],
-            capture_output=True, text=True, check=True, timeout=20,
-        ).stdout.strip().splitlines()
-        if stamp:
-            return datetime.fromisoformat(stamp[-1])
-    except (subprocess.SubprocessError, ValueError, OSError):
-        pass
-    return None
-
-
 def dates(filename: str, source: str) -> tuple[datetime, datetime]:
+    """Resolve pubDate and updated from the page's own JSON-LD.
+
+    This deliberately reads nothing but the page. An earlier version fell back
+    to the file's first commit via `git log --diff-filter=A`, which is wrong in
+    a way that only shows up in CI: actions/checkout does a depth-1 clone, so
+    git sees exactly one commit and attributes *every* file to it. Each merge
+    therefore re-stamped the whole archive with the merge time, and every
+    article resurfaced as new in the feed on every push to main.
+
+    A pubDate has to be stable across regenerations or it is worse than
+    useless, so the only accepted source is an explicit datePublished in the
+    markup. test_every_article_declares_a_publication_date keeps it that way.
+    """
     published = modified = None
     for node in jsonld(source):
-        for key, target in (("datePublished", "published"), ("dateModified", "modified")):
+        for key in ("datePublished", "dateModified"):
             raw = node.get(key)
             if not raw:
                 continue
@@ -124,18 +121,19 @@ def dates(filename: str, source: str) -> tuple[datetime, datetime]:
                 continue
             if parsed.tzinfo is None:
                 parsed = parsed.replace(tzinfo=timezone.utc)
-            if target == "published" and published is None:
+            if key == "datePublished" and published is None:
                 published = parsed
-            elif target == "modified" and modified is None:
+            elif key == "dateModified" and modified is None:
                 modified = parsed
+
     if published is None:
-        published = git_first_commit_date(filename)
-    if published is None:
-        published = modified
-    if modified is None:
-        modified = published
-    fallback = datetime.now(timezone.utc)
-    return (published or fallback), (modified or fallback)
+        # Never invent one, and never reach for the clock: a wrong-but-stable
+        # date is recoverable, a date that moves on every build is not.
+        raise SystemExit(
+            f"{filename}: no datePublished in its JSON-LD. Add an Article node "
+            f"with a real publication date before regenerating the feed."
+        )
+    return published, (modified or published)
 
 
 def category(source: str) -> str:

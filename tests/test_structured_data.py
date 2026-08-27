@@ -325,3 +325,76 @@ def test_feed_is_discoverable_from_every_page(filename):
         l.get("rel") == "alternate" and l.get("type") == "application/rss+xml"
         for l in page.link
     ), f"{filename}: no <link rel=\"alternate\" type=\"application/rss+xml\">"
+
+
+def _syndicated_pages():
+    """Pages that appear as items in feed.xml — see EXCLUDE in generate_feed.py."""
+    skip = {"about.html", "contact.html", "privacy-policy.html",
+            "terms-of-service.html", "methodology.html", "index.html"}
+    out = []
+    for filename in PAGES:
+        if filename in skip:
+            continue
+        if "<article" in _raw(filename):
+            out.append(filename)
+    return out
+
+
+@pytest.mark.parametrize("filename", _syndicated_pages())
+def test_every_article_declares_a_publication_date(filename):
+    """A feed item's pubDate must come from the page, not from the clock.
+
+    generate_feed.py used to fall back to the file's first git commit. On CI's
+    depth-1 clone git sees one commit and attributes every file to it, so each
+    merge re-stamped the whole archive and every article resurfaced as new.
+    An explicit datePublished is now the only accepted source, so its absence
+    has to be a test failure rather than a silently wrong date.
+    """
+    published = [
+        node["datePublished"]
+        for node in _nodes(filename)
+        if node.get("datePublished")
+    ]
+    assert published, (
+        f"{filename}: no top-level JSON-LD node declares datePublished, so its "
+        f"feed pubDate would have no stable source"
+    )
+    assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", published[0]), (
+        f"{filename}: datePublished {published[0]!r} is not a plain ISO date"
+    )
+
+
+@pytest.mark.parametrize("filename", _syndicated_pages())
+def test_feed_pubdate_matches_the_pages_declared_date(filename):
+    """The generated feed must agree with the markup it was generated from."""
+    from email.utils import parsedate_to_datetime
+
+    declared = next(
+        (n["datePublished"] for n in _nodes(filename) if n.get("datePublished")),
+        None,
+    )
+    if declared is None:
+        pytest.skip("no datePublished — reported by test_every_article_declares_a_publication_date")
+    url = canonical_url_for(filename)
+    for item in _feed().findall("item"):
+        if item.findtext("link") != url:
+            continue
+        actual = parsedate_to_datetime(item.findtext("pubDate")).date().isoformat()
+        assert actual == declared, (
+            f"{filename}: feed pubDate is {actual}, page declares {declared}. "
+            f"Regenerate with generate_feed.py."
+        )
+        return
+    pytest.fail(f"{filename}: no feed item links to {url}")
+
+
+def test_itemlist_nodes_do_not_carry_creativework_dates():
+    """ItemList is an Intangible; datePublished/dateModified belong on the
+    Article node, which every syndicated page now has."""
+    for filename in PAGES:
+        for lst in _of_type(filename, "ItemList"):
+            for key in ("datePublished", "dateModified"):
+                assert key not in lst, (
+                    f"{filename}: ItemList carries {key!r}, which is not valid on "
+                    f"an Intangible — it belongs on the page's Article node"
+                )
