@@ -105,6 +105,7 @@
     </script>
 </head>
 <body class="antialiased bg-slate-50">
+    <a class="tpi-skip" href="#main">Skip to content</a>
 
     <!-- Reading progress: CSS scroll-driven animation, no JavaScript -->
     <div class="tpi-progress" aria-hidden="true"></div>
@@ -142,7 +143,7 @@
         <strong>FTC Affiliate Disclosure:</strong> As an Amazon Associate, techpicksio.com earns from qualifying purchases. When you buy through links on our site, we may earn an affiliate commission at no extra cost to you.
     </div>
 
-    <main class="max-w-4xl mx-auto px-4 pb-16">
+    <main id="main" tabindex="-1" class="max-w-4xl mx-auto px-4 pb-16">
         <article class="bg-white p-6 md:p-10 rounded-2xl shadow-sm border border-slate-200 prose max-w-none">
             <h1 class="text-3xl md:text-4xl font-extrabold text-primary mb-6 leading-tight mt-0">DJI Osmo Mobile 6 Review: Still the Best Smartphone Gimbal?</h1>
             <p class="text-sm text-slate-500 mb-6">Last updated: August 24, 2026 &middot; Research-based guide &middot; techpicksio.com</p>
@@ -150,7 +151,7 @@
             <p class="lead text-lg text-slate-600 mb-4"><strong>Buy it.</strong> If you shoot alone, the DJI Osmo Mobile 6 is still the smartphone gimbal to get in 2026. The magnetic clamp removes the manual balancing step that leaves cheaper gimbals sitting unused in a bag, and ActiveTrack 6.0 keeps you framed when there's nobody behind the camera to do it for you. <strong>Skip it if</strong> you shoot with a thick case you won't remove, or you need more than ~6.4 hours of runtime — those are its two real limits, and neither has a workaround.</p>
             <p class="text-xs text-slate-400 mb-8"><strong>How we pick:</strong> published manufacturer specifications and aggregated user reviews &mdash; not hands-on testing.</p>
 
-            <img src="images/dji-osmo-mobile-6.jpg" width="800" height="902" alt="DJI Osmo Mobile 6 smartphone gimbal" class="w-full h-auto rounded-xl mb-8 shadow-md object-cover" style="max-width:420px;">
+            <img loading="lazy" src="images/dji-osmo-mobile-6.jpg" width="800" height="902" alt="DJI Osmo Mobile 6 smartphone gimbal" class="tpi-plate w-full h-auto rounded-xl mb-8 shadow-md object-cover" style="max-width:420px;">
 
             <section class="tpi-verdict not-prose" aria-labelledby="verdict-heading">
                 <span class="tpi-badge tpi-badge--pick">Best overall &mdash; solo-creator smartphone gimbal</span>
@@ -179,20 +180,36 @@
             </section>
 
             <h2>Key Technical Specifications</h2>
-            <div class="overflow-x-auto my-6">
-                <table class="w-full border-collapse text-sm">
+            <div class="tpi-table-wrap not-prose">
+                <table class="tpi-table">
+                    <caption class="sr-only">DJI Osmo Mobile 6 specifications and what each one means in practice</caption>
                     <thead>
-                        <tr class="bg-slate-100 text-left">
-                            <th class="p-4 font-bold text-primary border-b border-slate-200">Specification</th>
-                            <th class="p-4 font-bold text-primary border-b border-slate-200">What It Means for You</th>
-                        </tr>
+                    <tr>
+                        <th scope="col">Specification</th>
+                        <th scope="col">What It Means for You</th>
+                    </tr>
                     </thead>
                     <tbody>
-                        <tr><td class="p-4 border-b border-slate-100"><strong>Stabilization</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">3-axis motorized gimbal &mdash; walking and running shots stay level instead of bouncing, so you can skip stabilizing footage in post</td></tr>
-                        <tr><td class="p-4 border-b border-slate-100"><strong>Weight</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">309g (gimbal) + 31g (magnetic clamp) &mdash; light enough to hold overhead one-handed for a full run of B-roll without your arm giving out</td></tr>
-                        <tr><td class="p-4 border-b border-slate-100"><strong>Tracking</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">ActiveTrack 6.0 (face and body) &mdash; keeps you in frame solo, so you don't need a second person operating camera</td></tr>
-                        <tr><td class="p-4 border-b border-slate-100"><strong>Extension Rod</strong></td><td class="p-4 border-b border-slate-100 text-slate-600">Built-in 215mm (8.5") telescopic &mdash; gets you overhead and low-angle shots without packing a separate monopod</td></tr>
-                        <tr><td class="p-4"><strong>Rated Battery</strong></td><td class="p-4 text-slate-600">Up to ~6.4 hours (DJI figure) &mdash; enough for most half-day shoots on a single charge, though heavy trackers should budget a top-up</td></tr>
+                    <tr>
+                        <th scope="row">Stabilization</th>
+                        <td data-label="What It Means for You">3-axis motorized gimbal &mdash; walking and running shots stay level instead of bouncing, so you can skip stabilizing footage in post</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Weight</th>
+                        <td data-label="What It Means for You">309g (gimbal) + 31g (magnetic clamp) &mdash; light enough to hold overhead one-handed for a full run of B-roll without your arm giving out</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Tracking</th>
+                        <td data-label="What It Means for You">ActiveTrack 6.0 (face and body) &mdash; keeps you in frame solo, so you don't need a second person operating camera</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Extension Rod</th>
+                        <td data-label="What It Means for You">Built-in 215mm (8.5") telescopic &mdash; gets you overhead and low-angle shots without packing a separate monopod</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Rated Battery</th>
+                        <td data-label="What It Means for You">Up to ~6.4 hours (DJI figure) &mdash; enough for most half-day shoots on a single charge, though heavy trackers should budget a top-up</td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -221,7 +238,7 @@
                     </ul>
                 </div>
             </div>
-            <p><a href="https://www.amazon.com/dp/B0C5J4M8HD?tag=techpicksio-20" class="inline-block bg-cta hover:bg-cta-hover text-slate-900 px-6 py-3 rounded-lg font-bold transition-colors shadow-sm" target="_blank" rel="sponsored nofollow noopener">See Current Amazon Deal on the Osmo Mobile 6 &rarr;</a></p>
+            <p><a href="https://www.amazon.com/dp/B0C5J4M8HD?tag=techpicksio-20" class="tpi-btn tpi-btn--cta" target="_blank" rel="sponsored nofollow noopener">See Current Amazon Deal on the Osmo Mobile 6 &rarr;</a></p>
 
 
             <h2>Frequently Asked Questions</h2>
