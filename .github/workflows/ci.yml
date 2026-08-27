@@ -37,10 +37,11 @@ jobs:
         run: |
           cp feed.xml /tmp/feed.before.xml
           python3 generate_feed.py
-          # Compare item URLs only — lastBuildDate changes on every run.
-          grep -o '<link>[^<]*</link>' /tmp/feed.before.xml | sort > /tmp/before.feed
-          grep -o '<link>[^<]*</link>' feed.xml | sort > /tmp/after.feed
-          diff -u /tmp/before.feed /tmp/after.feed
+          # Byte-for-byte. The generator reads only the pages' own JSON-LD, so
+          # regeneration is deterministic — including lastBuildDate, which is
+          # derived from the newest article rather than the clock. Comparing
+          # URLs alone is what let a run of wrong pubDates ship once already.
+          diff -u /tmp/feed.before.xml feed.xml
 
       - name: sitemap.xml covers every .html file on disk
         run: |
