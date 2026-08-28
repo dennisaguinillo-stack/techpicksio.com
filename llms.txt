@@ -38,7 +38,7 @@
 
 ## Drones & storage
 - [DJI Mini 4 Pro vs. Potensic Atom](/dji-mini-4-pro-vs-potensic-atom.html): sub-250g drones compared on sensor, bitrate, flight time and transmission range
-- [5 Best External SSDs for ProRes 4K Mobile Video](/best-portable-ssds-prores.html): which sustained write speeds record ProRes without dropped frames, and which interface your phone actually supports
+- [3 Best External SSDs for ProRes 4K Mobile Video](/best-portable-ssds-prores.html): which sustained write speeds record ProRes without dropped frames, and which interface your phone actually supports
 
 ## About this site
 - [Methodology](/methodology.html): the sources behind every guide, the specs compared in each category, and the claims this site refuses to make
