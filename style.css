@@ -1016,6 +1016,23 @@ main[tabindex="-1"]:focus { outline: none; }
   filter: brightness(var(--plate-brightness));
 }
 
+/* Comparison image captions — a side-by-side product image block (as in a
+   head-to-head intro) has no other way to tell a skimmer, or a generative
+   engine, which photo is which without reading further down the page. The
+   figcaption labels the photo; it must stay quiet so it never competes with
+   the verdict badge that follows it. Wrap each image in a <figure> so the
+   caption stacks under its own image, not between them, when the pair
+   reflows to one column on narrow screens. */
+.tpi-compare__item { margin: 0; }
+.tpi-compare-caption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: 600;
+  color: rgb(var(--muted));
+  text-align: center;
+}
+
 /* ==========================================================================
    5. MOTION, FOCUS & PRINT
    ========================================================================== */
