@@ -24,6 +24,17 @@ from htmlkit import ROOT, SITE_URL, all_pages, canonical_url_for, parse
 PAGES = all_pages()
 
 AFFILIATE_TAG = "techpicksio-20"
+VALID_AFFILIATE_TAGS = {
+    AFFILIATE_TAG,
+    "techpicksio-cages-20",
+    "techpicksio-mics-20",
+    "techpicksio-light-20",
+    "techpicksio-gimbal-20",
+    "techpicksio-drone-20",
+    "techpicksio-storage-20",
+    "techpicksio-mono-20",
+    "techpicksio-lens-20",
+}
 ASIN_RE = re.compile(r"^[A-Z0-9]{10}$")
 DISCLOSURE_TEXT = "FTC Affiliate Disclosure"
 
@@ -158,8 +169,9 @@ def test_amazon_links_carry_full_affiliate_contract(filename):
         href = a.get("href", "")
         if "amazon.com" not in href:
             continue
-        assert f"tag={AFFILIATE_TAG}" in href, (
-            f"{filename}: Amazon link missing affiliate tag: {href}"
+        tag_match = re.search(r"[?&]tag=([^&]+)", href)
+        assert tag_match and tag_match.group(1) in VALID_AFFILIATE_TAGS, (
+            f"{filename}: Amazon link missing a valid affiliate tag: {href}"
         )
         asin = _asin_from_amazon_href(href)
         assert asin and ASIN_RE.match(asin), (
