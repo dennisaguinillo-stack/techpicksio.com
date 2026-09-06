@@ -1033,6 +1033,70 @@ main[tabindex="-1"]:focus { outline: none; }
   text-align: center;
 }
 
+/* --- 4.16 Multi-network CTA group -----------------------------------------
+   A product listed on more than one affiliate network gets one button per
+   network instead of one bare "check price" button. Only one button in the
+   group carries `.tpi-btn--cta` (the orange fill) — the network judged the
+   best link for that product; the rest use `.tpi-btn--ghost` so the row
+   reads as one clear primary action with secondary options, not three
+   buttons competing for the click. Wraps to a stacked column on phones so
+   no button drops under the 44px tap floor from being squeezed. */
+.tpi-cta-group {
+  display: flex; flex-wrap: wrap; gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+.tpi-cta-group .tpi-btn { flex: 1 1 auto; }
+@media (max-width: 479px) { .tpi-cta-group .tpi-btn { flex: 1 1 100%; } }
+
+/* --- 4.17 Store hero (category storefronts) --------------------------------
+   Same tokens and gradient as the homepage hero (4.3) — the Lifestyle Tech
+   silo is a new content section, not a new visual brand, so it must read as
+   the same site. `--store` only tightens vertical rhythm slightly, since a
+   storefront page leads straight into a category grid rather than a stats
+   row. */
+.tpi-hero--store { padding-bottom: 1.75rem; }
+@media (min-width: 768px) { .tpi-hero--store { padding-bottom: 2.25rem; } }
+.tpi-hero--store .tpi-hero__title { margin-bottom: 0.5rem; }
+
+/* --- 4.18 Promo banner ------------------------------------------------------
+   Points at one real, currently-listed bundle or deal page — never a
+   fabricated discount code or countdown. No urgency mechanics belong here;
+   the badge is editorial ("Bundle"), not a claim about scarcity or time. */
+.tpi-promo {
+  display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; justify-content: space-between;
+  background:
+    linear-gradient(180deg, rgb(var(--cta) / 0.08), transparent 70%),
+    rgb(var(--surface));
+  border: 1px solid rgb(var(--line)); border-radius: var(--radius);
+  padding: 1.25rem 1.5rem; margin: 2rem 0;
+}
+.tpi-promo__body { flex: 1 1 20rem; }
+.tpi-promo__title { margin: 0.5rem 0 0.375rem; font-size: 1.125rem; font-weight: 800; color: rgb(var(--ink)); letter-spacing: -0.015em; }
+.tpi-promo__body p { margin: 0; font-size: 0.9375rem; line-height: 1.6; color: rgb(var(--body)); }
+.tpi-promo .tpi-btn { flex: none; }
+
+/* --- 4.19 Badge modifiers ---------------------------------------------------
+   Editorial categorization only — see references/compliance.md. These never
+   pair with a star rating, a score, or "tested" language; they say what kind
+   of pick this is, not how it performed in hands-on testing. */
+.tpi-badge--editors-choice { background-color: rgb(var(--cta)); color: rgb(var(--cta-ink)); }
+.tpi-badge--budget-pick { background-color: rgb(var(--pro-bg)); color: rgb(var(--pro-text)); border: 1px solid rgb(var(--pro-border)); }
+.tpi-badge--pro-gear { background-color: rgb(var(--accent-soft)); color: rgb(var(--accent-fg)); border: 1px solid rgb(var(--accent-fg) / 0.35); }
+
+/* --- 4.20 Numbered pick badge ------------------------------------------------
+   For "Top 5" / "Ranked Essentials" grids. A plain numeral on the existing
+   surface/ink tokens — not a star, not a score, just the list position. */
+.tpi-card { position: relative; }
+.tpi-rank {
+  position: absolute; top: 0.75rem; left: 0.75rem; z-index: 1;
+  display: grid; place-items: center;
+  width: 1.75rem; height: 1.75rem; border-radius: 999px;
+  background-color: rgb(var(--surface) / 0.92); color: rgb(var(--ink));
+  border: 1px solid rgb(var(--line));
+  font-size: 0.8125rem; font-weight: 800;
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+}
+
 /* ==========================================================================
    5. MOTION, FOCUS & PRINT
    ========================================================================== */
