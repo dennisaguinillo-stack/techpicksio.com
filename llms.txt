@@ -6,8 +6,11 @@
 > manufacturer specifications, official product documentation and a synthesis of
 > verified customer and expert reviews — techpicksio.com is a research site and
 > does not claim hands-on testing of the products it covers, and publishes no
-> rating or score of its own. techpicksio.com is an Amazon Associate and earns
-> from qualifying purchases; every commercial link is marked as sponsored and a
+> rating or score of its own. A separate Lifestyle Tech silo applies the same
+> research standard to everyday tech (desk gear, travel tech, daily carry).
+> techpicksio.com participates in the Amazon Services LLC Associates Program,
+> the Shopee Affiliate Program, and the Lazada Affiliate Program and earns from
+> qualifying purchases; every commercial link is marked as sponsored and a
 > disclosure appears above the first one on every page.
 
 ## Start here (new creators)
@@ -40,9 +43,14 @@
 - [DJI Mini 4 Pro vs. Potensic Atom](/dji-mini-4-pro-vs-potensic-atom.html): sub-250g drones compared on sensor, bitrate, flight time and transmission range
 - [3 Best External SSDs for ProRes 4K Mobile Video](/best-portable-ssds-prores.html): which sustained write speeds record ProRes without dropped frames, and which interface your phone actually supports
 
+## Lifestyle Tech
+- [Lifestyle Tech](/lifestyle-tech.html): storefront hub for everyday tech coverage outside mobile filmmaking — desk gear, travel tech and daily carry
+- [Desk Gear for Creators](/lifestyle-tech-desk-gear.html): monitor arms, USB-C docks and desk lighting for a workspace that doubles as a recording space
+
 ## About this site
 - [Methodology](/methodology.html): the sources behind every guide, the specs compared in each category, and the claims this site refuses to make
 - [About techpicksio.com](/about.html): who runs the site, how products are chosen for coverage, and how the site makes money
 - [Contact](/contact.html): corrections, coverage requests and partnership enquiries
+- [Shopping FAQ](/shopping-faq.html): how Amazon, Shopee and Lazada each handle returns, warranty and shipping for purchases made through our links
 - [Privacy Policy](/privacy-policy.html): data handling, cookies and the full affiliate-link disclosure
 - [Terms of Service](/terms-of-service.html): terms governing use of the site
