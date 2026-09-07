@@ -12,7 +12,7 @@
     <copyright>Copyright 2026 techpicksio.com</copyright>
     <managingEditor>hello@techpicksio.com (techpicksio.com editorial team)</managingEditor>
     <webMaster>hello@techpicksio.com (techpicksio.com editorial team)</webMaster>
-    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 00:00:00 +0000</lastBuildDate>
     <generator>generate_feed.py</generator>
     <docs>https://www.rssboard.org/rss-specification</docs>
     <atom:link href="https://www.techpicksio.com/feed.xml" rel="self" type="application/rss+xml" />
@@ -60,11 +60,7 @@
                     </dl>
 
                     <!-- ASIN NEEDED: replace with a real, verified Amazon product link -->
-                    <div class="tpi-cta-group not-prose">
-                        <span class="tpi-btn" style="background-color:rgb(var(--surface-2));color:rgb(var(--muted));cursor:not-allowed" title="Affiliate link pending">Check price on Amazon (link pending)</span>
-                        <span class="tpi-btn tpi-btn--ghost" style="cursor:not-allowed" title="Affiliate link pending">Check price on Shopee (link pending)</span>
-                        <span class="tpi-btn tpi-btn--ghost" style="cursor:not-allowed" title="Affiliate link pending">Check price on Lazada (link pending)</span>
-                    </div>
+                    <span class="tpi-btn" style="background-color:rgb(var(--surface-2));color:rgb(var(--muted));cursor:not-allowed" title="Affiliate link pending">Check price on Amazon (link pending)</span>
                 </div>
 
                 <div class="tpi-measure">
@@ -108,18 +104,18 @@
                 <div class="tpi-faq not-prose my-6">
                     <details open>
                         <summary><span>Do these prices change often?</span></summary>
-                        <p>We don't display a live price on this page at all &mdash; check the current price on Amazon, Shopee or Lazada through the link before buying.</p>
+                        <p>We don't display a live price on this page at all &mdash; check the current price on Amazon through the link before buying.</p>
                     </details>
                     <details>
                         <summary><span>What happens if I need to return one of these?</span></summary>
-                        <p>Returns, warranty and shipping are handled entirely by whichever network you buy from. See our <a href="https://www.techpicksio.com/shopping-faq.html">Shopping FAQ</a> for how that works on each one.</p>
+                        <p>Returns, warranty and shipping are handled entirely by Amazon under its own policies. See our <a href="https://www.techpicksio.com/shopping-faq.html">Shopping FAQ</a> for how that works.</p>
                     </details>
                 </div>
 
                 
                 </div>]]></content:encoded>
       <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-      <atom:updated>2026-09-06T00:00:00Z</atom:updated>
+      <atom:updated>2026-09-07T00:00:00Z</atom:updated>
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Lifestyle Tech</category>
@@ -133,14 +129,14 @@
       <title>Shopping FAQ | techpicksio.com</title>
       <link>https://www.techpicksio.com/shopping-faq.html</link>
       <guid isPermaLink="true">https://www.techpicksio.com/shopping-faq.html</guid>
-      <description>Returns, warranty and shipping questions answered: how Amazon, Shopee and Lazada each handle fulfillment for purchases made through techpicksio.com links.</description>
+      <description>Returns, warranty and shipping questions answered: how Amazon handles fulfillment for purchases made through techpicksio.com links.</description>
       <content:encoded><![CDATA[<p><em><strong>Disclosure:</strong> techpicksio.com is a participant in the Amazon Services LLC Associates Program and earns from qualifying purchases made through links in this article, at no extra cost to you. Recommendations are compiled from published manufacturer specifications and documentation; techpicksio.com does not claim hands-on testing of the products covered.</em></p><span class="tpi-badge tpi-badge--quiet">Shopping FAQ</span>
             <h1 class="text-3xl md:text-4xl font-extrabold text-primary mt-4 mb-4 leading-tight">Shopping FAQ: Returns, Warranty &amp; Shipping</h1>
-            <p class="lead text-lg text-slate-600 mb-8">techpicksio.com doesn't sell anything and doesn't ship anything. Every product link on this site goes to Amazon, Shopee, or Lazada, and each of those marketplaces handles the order, the shipping and any return under its own policy &mdash; not ours.</p>
+            <p class="lead text-lg text-slate-600 mb-8">techpicksio.com doesn't sell anything and doesn't ship anything. Every product link on this site goes to Amazon, which handles the order, the shipping and any return under its own policy &mdash; not ours.</p>
 
             <div class="tpi-measure">
                 <h2 id="who-fulfills">Who actually fulfills my order?</h2>
-                <p>Whichever network you click through to buy from. When a product is available on more than one network, the buttons on that page are labeled by network so you always know where a purchase would go. Once you land on Amazon, Shopee, or Lazada, that page's price, stock, shipping estimate and seller are the current, accurate ones &mdash; not anything shown on techpicksio.com.</p>
+                <p>Amazon. Once you land on Amazon, that page's price, stock, shipping estimate and seller are the current, accurate ones &mdash; not anything shown on techpicksio.com.</p>
             </div>
 
             <div class="tpi-faq not-prose my-6">
@@ -149,28 +145,20 @@
                     <p>Start a return from Your Orders on Amazon. Most items bought from Amazon or a third-party seller fulfilled by Amazon can be returned within Amazon's stated return window, shown on the order and product page at the time of purchase.</p>
                 </details>
                 <details>
-                    <summary><span>How do returns work on Shopee?</span></summary>
-                    <p>Use the Return/Refund request inside the Shopee app, from the order detail page. Shopee's Buyer Protection covers eligible orders within the window shown at checkout; the seller and Shopee handle the resolution.</p>
-                </details>
-                <details>
-                    <summary><span>How do returns work on Lazada?</span></summary>
-                    <p>Open the Lazada app or site, go to the order in question, and use the Return/Refund Centre. Lazada's own return policy and timeframe, shown on the product listing, govern what's eligible.</p>
-                </details>
-                <details>
                     <summary><span>Who covers the product warranty?</span></summary>
-                    <p>The manufacturer or the selling merchant, per the terms listed on the product page at checkout on whichever network you bought from. techpicksio.com does not extend, administer, or guarantee any warranty.</p>
+                    <p>The manufacturer or the selling merchant, per the terms listed on the product page at checkout on Amazon. techpicksio.com does not extend, administer, or guarantee any warranty.</p>
                 </details>
                 <details>
                     <summary><span>Why doesn't a product page show a live price?</span></summary>
-                    <p>Prices on all three networks change often, and a number on this site would frequently be wrong. We describe price ranges in the writing where it's useful ("under $50") and link out so the price you see is always the current one.</p>
+                    <p>Prices on Amazon change often, and a number on this site would frequently be wrong. We describe price ranges in the writing where it's useful ("under $50") and link out so the price you see is always the current one.</p>
                 </details>
             </div>
 
             <div class="tpi-measure">
-                <p>Questions about a specific order should go to the network you purchased from, since they hold the order record. For anything about this site itself, our <a href="https://www.techpicksio.com/contact.html">Contact page</a> reaches the editorial team.</p>
+                <p>Questions about a specific order should go to Amazon, since they hold the order record. For anything about this site itself, our <a href="https://www.techpicksio.com/contact.html">Contact page</a> reaches the editorial team.</p>
             </div>]]></content:encoded>
       <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-      <atom:updated>2026-09-06T00:00:00Z</atom:updated>
+      <atom:updated>2026-09-07T00:00:00Z</atom:updated>
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Guides</category>
