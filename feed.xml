@@ -123,7 +123,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Lifestyle Tech</category>
-      <media:content url="https://www.techpicksio.com/images/neewer-phone-cage.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/neewer-phone-cage.jpg" medium="image" type="image/jpeg" width="800" height="784">
         <media:title type="plain">Desk Gear for Creators | techpicksio.com</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -166,7 +166,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Guides</category>
-      <media:content url="https://www.techpicksio.com/images/neewer-phone-cage.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/neewer-phone-cage.jpg" medium="image" type="image/jpeg" width="800" height="784">
         <media:title type="plain">Shopping FAQ | techpicksio.com</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -361,7 +361,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Start here</category>
-      <media:content url="https://www.techpicksio.com/images/smallrig-cage-kit.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/smallrig-cage-kit.jpg" medium="image" type="image/jpeg" width="800" height="808">
         <media:title type="plain">Content Creator Gear Checklist (Free Printable)</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -520,7 +520,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Guides</category>
-      <media:content url="https://www.techpicksio.com/images/ulanzi-rig-kit.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/ulanzi-rig-kit.jpg" medium="image" type="image/jpeg" width="800" height="753">
         <media:title type="plain">Content Creator Starter Kit: The Gear You Need (2026)</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -651,7 +651,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Start here</category>
-      <media:content url="https://www.techpicksio.com/images/meneresas-3-in-1.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/meneresas-3-in-1.jpg" medium="image" type="image/jpeg" width="630" height="637">
         <media:title type="plain">How Much It Costs to Start Content Creation (2026)</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -788,7 +788,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Start here</category>
-      <media:content url="https://www.techpicksio.com/images/boya-mini-2.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/boya-mini-2.jpg" medium="image" type="image/jpeg" width="630" height="705">
         <media:title type="plain">First 5 Purchases for a New Content Creator, Ranked</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -921,7 +921,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Start here</category>
-      <media:content url="https://www.techpicksio.com/images/kf-ms21-selfie.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/kf-ms21-selfie.jpg" medium="image" type="image/jpeg" width="800" height="824">
         <media:title type="plain">Phone-Only Content Creation: Can You Skip the Camera?</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -1083,7 +1083,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Rigs &amp; Cages</category>
-      <media:content url="https://www.techpicksio.com/images/zeadio-t-grip.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/zeadio-t-grip.jpg" medium="image" type="image/jpeg" width="800" height="893">
         <media:title type="plain">Best MagSafe Video Cages for iPhone (2026) | techpicksio.com</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -1329,7 +1329,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Light &amp; Optics</category>
-      <media:content url="https://www.techpicksio.com/images/neewer-rgb-light.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/neewer-rgb-light.jpg" medium="image" type="image/jpeg" width="800" height="773">
         <media:title type="plain">5 Best Budget LED Video Lights (2026) | techpicksio.com</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -1517,7 +1517,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Drones &amp; Storage</category>
-      <media:content url="https://www.techpicksio.com/images/samsung-t7-shield.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/samsung-t7-shield.jpg" medium="image" type="image/jpeg" width="800" height="692">
         <media:title type="plain">3 Best ProRes SSDs for Mobile Video (2026) | techpicksio.com</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -1773,7 +1773,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Audio</category>
-      <media:content url="https://www.techpicksio.com/images/rode-wireless-micro.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/rode-wireless-micro.jpg" medium="image" type="image/jpeg" width="800" height="443">
         <media:title type="plain">5 Best Wireless Lav Mics Under $100 (2026) | techpicksio.com</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -1932,7 +1932,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Rigs &amp; Cages</category>
-      <media:content url="https://www.techpicksio.com/images/neewer-phone-cage.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/neewer-phone-cage.jpg" medium="image" type="image/jpeg" width="800" height="784">
         <media:title type="plain">iPhone Cinematic Rig Under $150 (2026) | techpicksio.com</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -2070,7 +2070,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Motion</category>
-      <media:content url="https://www.techpicksio.com/images/insta360-extended.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/insta360-extended.jpg" medium="image" type="image/jpeg" width="800" height="770">
         <media:title type="plain">Drone-Like Shots With a Monopod (2026) | techpicksio.com</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -2236,7 +2236,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Drones &amp; Storage</category>
-      <media:content url="https://www.techpicksio.com/images/dji-mini-4-pro.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/dji-mini-4-pro.jpg" medium="image" type="image/jpeg" width="800" height="693">
         <media:title type="plain">DJI Mini 4 Pro vs Potensic Atom (2026) | techpicksio.com</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -2377,7 +2377,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Motion</category>
-      <media:content url="https://www.techpicksio.com/images/dji-osmo-mobile-6.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/dji-osmo-mobile-6.jpg" medium="image" type="image/jpeg" width="800" height="902">
         <media:title type="plain">DJI Osmo Mobile 6 Review (2026) | techpicksio.com</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -2625,7 +2625,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Rigs &amp; Cages</category>
-      <media:content url="https://www.techpicksio.com/images/neewer-phone-cage.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/neewer-phone-cage.jpg" medium="image" type="image/jpeg" width="800" height="784">
         <media:title type="plain">5 Best Phone Video Cages (2026) | techpicksio.com</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -2874,7 +2874,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Light &amp; Optics</category>
-      <media:content url="https://www.techpicksio.com/images/smallrig-vnd-nd2-32.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/smallrig-vnd-nd2-32.jpg" medium="image" type="image/jpeg" width="800" height="677">
         <media:title type="plain">Best ND Filters &amp; Anamorphic Lenses for Phones (2026)</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -3106,7 +3106,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Rigs &amp; Cages</category>
-      <media:content url="https://www.techpicksio.com/images/rode-phone-cage.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/rode-phone-cage.jpg" medium="image" type="image/jpeg" width="800" height="489">
         <media:title type="plain">Rode Phone Cage Review: MagSafe Video Rig? | techpicksio.com</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -3281,7 +3281,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Audio</category>
-      <media:content url="https://www.techpicksio.com/images/rode-wireless-micro.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/rode-wireless-micro.jpg" medium="image" type="image/jpeg" width="800" height="443">
         <media:title type="plain">Rode Wireless Micro vs DJI Mic Mini (2026) | techpicksio.com</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
@@ -3529,7 +3529,7 @@
       <dc:creator>techpicksio.com editorial team</dc:creator>
       <author>hello@techpicksio.com (techpicksio.com editorial team)</author>
       <category>Rigs &amp; Cages</category>
-      <media:content url="https://www.techpicksio.com/images/neewer-pa017-rig.jpg" medium="image" type="image/jpeg">
+      <media:content url="https://www.techpicksio.com/images/neewer-pa017-rig.jpg" medium="image" type="image/jpeg" width="800" height="734">
         <media:title type="plain">Best Universal Android Video Cages (2026) | techpicksio.com</media:title>
         <media:credit role="provider">techpicksio.com</media:credit>
       </media:content>
