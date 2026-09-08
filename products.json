@@ -1,5 +1,16 @@
 {
-  "_comment": "Facts live here, not in the model. Everything under 'specs', 'verdict_facts', 'asin' and 'image' is copied verbatim into the page. Gemini only writes prose around them.",
+  "_comment": "Facts live here, not in the model. Everything under 'specs', 'verdict_facts' and 'image' is copied verbatim into the page. Gemini only writes prose around them.",
+
+  "_verify_before_running": [
+    "SanDisk Extreme SSD V2: official data sheet gives read speed (2000 MB/s) but not an exact write speed - only that it's lower. Confirm a real write-speed figure from a second source (retailer listing or independent test) before publishing, or leave the spec table as-is (it already omits an invented number).",
+    "Insta360 Flow 2 Pro: max phone/payload weight was not published on any official page checked - not included below. Add it only once you've confirmed it from the manual or Insta360 support.",
+    "Insta360 Flow 2 Pro: whether the AI Tracker hardware is bundled or sold separately varies by current promo/SKU - re-check store.insta360.com before publishing the con line about it.",
+    "DJI Mic Mini: showed as out of stock on DJI's own store at research time - confirm current availability via B&H/Amazon before adding an ASIN.",
+    "Ulanzi VL49 Pro: the 90-minute runtime figure is Ulanzi's own claim, no independent test found to cross-check.",
+    "No product below has an image yet - image.src points to a filename under images/ that you still need to add at the width/height listed.",
+    "No ASIN is set for any product - each page will render the site's 'link pending' placeholder until you add one.",
+    "Prices are deliberately left out of every spec table - the site's compliance rule bans live price figures in the UI (see references/compliance.md); the build script's own check() function will hold any page that slips one in."
+  ],
 
   "defaults": {
     "affiliate_tag": "techpicksio-20",
@@ -10,84 +21,228 @@
 
   "products": [
     {
-      "slug": "dji-osmo-mobile-6-review",
-      "name": "DJI Osmo Mobile 6",
-      "category_label": "Motion",
-      "category_anchor": "index.html#motion",
-      "badge": "Editor's choice &mdash; smartphone gimbal",
-      "asin": "",
-      "source": "DJI published specifications",
-      "audience": "phone filmmakers who walk while they shoot and want steady footage without carrying a rig",
-      "image": {
-        "src": "images/dji-osmo-mobile-6.jpg",
-        "width": 1200,
-        "height": 750,
-        "alt": "DJI Osmo Mobile 6 gimbal holding a smartphone in landscape orientation"
-      },
-      "verdict_facts": [
-        { "label": "Weight", "value": "309 g" },
-        { "label": "Battery life", "value": "6 hr 24 min" },
-        { "label": "Payload", "value": "170&ndash;290 g" }
-      ],
-      "specs": [
-        { "spec": "Weight", "value": "309 g (gimbal only)" },
-        { "spec": "Folded size", "value": "189 &times; 84 &times; 44 mm" },
-        { "spec": "Battery life", "value": "6 hr 24 min (rated)" },
-        { "spec": "Charging time", "value": "1 hr 20 min" },
-        { "spec": "Compatible phone weight", "value": "170&ndash;290 g" },
-        { "spec": "Built-in extension rod", "value": "215 mm" },
-        { "spec": "Tripod", "value": "Included, screws into the base" }
-      ],
-      "known_pros": [
-        "Extension rod is built in, so there is nothing extra to pack",
-        "Magnetic clamp makes swapping the phone on and off fast",
-        "Side wheel controls zoom or focus without touching the screen"
-      ],
-      "known_cons": [
-        "Needs the DJI Mimo app for tracking, so features depend on app support for your phone",
-        "Heavier phones with thick cases can sit close to the payload limit"
-      ],
-      "sections": [
-        "Build and how it feels to hold",
-        "How steady the footage is",
-        "Battery and charging",
-        "Who should buy it"
-      ],
-      "faq_questions": [
-        "Does the DJI Osmo Mobile 6 work with Android phones?",
-        "Can you use it with a case on your phone?",
-        "Do you need the app to use it?"
-      ]
-    },
-
-    {
-      "slug": "example-second-product-review",
-      "name": "Second Product Name",
+      "slug": "dji-mic-mini-review",
+      "name": "DJI Mic Mini",
       "category_label": "Audio",
       "category_anchor": "index.html#audio",
       "badge": "Review",
       "asin": "",
-      "source": "manufacturer published specifications",
-      "audience": "who this is for, in plain words",
+      "source": "DJI's published specifications",
+      "audience": "solo creators and vloggers who want a barely-there wireless mic without extra features they won't use",
       "image": {
-        "src": "images/second-product.jpg",
+        "src": "images/dji-mic-mini.jpg",
         "width": 1200,
         "height": 750,
-        "alt": "Descriptive alt text for the product photo"
+        "alt": "DJI Mic Mini wireless transmitter clipped to a shirt collar"
       },
       "verdict_facts": [
-        { "label": "Weight", "value": "0 g" },
-        { "label": "Battery life", "value": "0 hr" },
-        { "label": "Connection", "value": "USB-C" }
+        { "label": "Transmitter weight", "value": "~10 g" },
+        { "label": "TX battery life", "value": "11.5 hr" },
+        { "label": "Range", "value": "400 m open field" }
       ],
       "specs": [
-        { "spec": "Weight", "value": "0 g" },
-        { "spec": "Connection", "value": "USB-C" }
+        { "spec": "Transmitter weight", "value": "~10 g (excluding clip magnet)" },
+        { "spec": "Receiver weight", "value": "~17.8 g (including interface cover)" },
+        { "spec": "Transmitter battery life", "value": "11.5 hr (noise cancellation off)" },
+        { "spec": "Receiver battery life", "value": "10.5 hr" },
+        { "spec": "Charging case capacity", "value": "1950 mAh" },
+        { "spec": "Range", "value": "400 m, open field" },
+        { "spec": "Connection", "value": "2.4 GHz GFSK + Bluetooth 5.3" }
       ],
-      "known_pros": ["Real advantage one", "Real advantage two", "Real advantage three"],
-      "known_cons": ["Real drawback one", "Real drawback two"],
-      "sections": ["Build", "Sound", "Who should buy it"],
-      "faq_questions": ["First question people actually search?"]
+      "known_pros": [
+        "Transmitter weighs about 10 g, so it barely shows clipped to a shirt or jacket",
+        "400 m open-field range covers far more distance than most vlogging or interview setups need",
+        "Charging case adds days of use in the field without a laptop nearby"
+      ],
+      "known_cons": [
+        "DJI's spec page doesn't list on-device recording storage, so confirm that separately if you need backup audio",
+        "Two radios (2.4 GHz plus Bluetooth) means more that can go wrong to troubleshoot than a simple wired lav"
+      ],
+      "sections": ["Build and how it clips on", "Range and battery in real use", "Who should buy it"],
+      "faq_questions": [
+        "Does the DJI Mic Mini work with iPhone and Android?",
+        "How long does the DJI Mic Mini charging case last in the field?"
+      ]
+    },
+
+    {
+      "slug": "ulanzi-vl49-pro-review",
+      "name": "Ulanzi VL49 Pro",
+      "category_label": "Light & Optics",
+      "category_anchor": "index.html#light",
+      "badge": "Review",
+      "asin": "",
+      "source": "Ulanzi's published specifications",
+      "audience": "mobile creators who need a pocketable fill or key light for short clips, interviews or product shots where colour accuracy matters",
+      "image": {
+        "src": "images/ulanzi-vl49-pro.jpg",
+        "width": 1200,
+        "height": 750,
+        "alt": "Ulanzi VL49 Pro mini RGB light mounted on a cold shoe"
+      },
+      "verdict_facts": [
+        { "label": "Weight", "value": "113.9 g" },
+        { "label": "Runtime (high)", "value": "~90 min" },
+        { "label": "CRI", "value": "&ge;95" }
+      ],
+      "specs": [
+        { "spec": "Weight", "value": "113.9 g" },
+        { "spec": "Dimensions", "value": "66 &times; 66 &times; 27 mm" },
+        { "spec": "Battery capacity", "value": "2500 mAh, USB-C" },
+        { "spec": "Runtime at high brightness", "value": "~90 min" },
+        { "spec": "Brightness at 0.5 m", "value": "210&ndash;430 lux, depending on colour temperature" },
+        { "spec": "Colour temperature range", "value": "2500&ndash;9000K" },
+        { "spec": "CRI", "value": "&ge;95" }
+      ],
+      "known_pros": [
+        "CRI of 95 or higher is a real step up for accurate skin tones at this price",
+        "Magnetic mount plus built-in RGB effects add flexibility for creative shots",
+        "USB-C charging matches modern phones, no separate proprietary cable to carry"
+      ],
+      "known_cons": [
+        "About 90 minutes at high brightness is short for a long shoot, and that figure is Ulanzi's own claim rather than an independent test",
+        "No IP or weather rating is listed, so treat it as indoor or handheld use only"
+      ],
+      "sections": ["Brightness and colour accuracy", "Battery life in practice", "Who should buy it"],
+      "faq_questions": [
+        "Is the Ulanzi VL49 Pro bright enough for outdoor filming?",
+        "Can the VL49 Pro mount directly to a phone cage?"
+      ]
+    },
+
+    {
+      "slug": "sandisk-extreme-portable-ssd-v2-review",
+      "name": "SanDisk Extreme Portable SSD (V2)",
+      "category_label": "Drones & Storage",
+      "category_anchor": "index.html#data",
+      "badge": "Review",
+      "asin": "",
+      "source": "SanDisk's published data sheet",
+      "audience": "creators offloading raw 4K or ProRes footage in the field who need rugged, pocket-sized storage",
+      "image": {
+        "src": "images/sandisk-extreme-ssd-v2.jpg",
+        "width": 1200,
+        "height": 750,
+        "alt": "SanDisk Extreme Portable SSD V2 next to a smartphone for scale"
+      },
+      "verdict_facts": [
+        { "label": "Read speed", "value": "Up to 2,000 MB/s" },
+        { "label": "Weight", "value": "46.9 g" },
+        { "label": "Protection", "value": "IP65, 3 m drop" }
+      ],
+      "specs": [
+        { "spec": "Read speed", "value": "Up to 2,000 MB/s" },
+        { "spec": "Weight", "value": "46.9 g" },
+        { "spec": "Dimensions", "value": "85 &times; 51 &times; 9.8 mm" },
+        { "spec": "Capacities available", "value": "1TB, 2TB, 4TB" },
+        { "spec": "Drop protection", "value": "Up to 3 m" },
+        { "spec": "Water/dust rating", "value": "IP65" },
+        { "spec": "USB interface", "value": "USB 3.2 Gen 2&times;2 (20 Gbps)" }
+      ],
+      "known_pros": [
+        "IP65 dust and water resistance plus a 3 m drop rating suit outdoor, run-and-gun shooting",
+        "46.9 g and pocket-sized, easy to carry as a backup drive",
+        "20 Gbps interface leaves headroom for high-bitrate 4K or ProRes if your adapter supports it"
+      ],
+      "known_cons": [
+        "SanDisk's own data sheet doesn't publish an exact write speed, only that it's lower than the 2,000 MB/s read figure, so treat write performance as unconfirmed until tested",
+        "Hitting the rated speed needs a USB 3.2 Gen 2&times;2 port and cable, which most phones and older laptops don't have"
+      ],
+      "sections": ["Speed and real-world transfer", "Durability for field use", "Who should buy it"],
+      "faq_questions": [
+        "Will the SanDisk Extreme SSD work directly with an iPhone?",
+        "Is 2,000 MB/s realistic for editing ProRes footage?"
+      ]
+    },
+
+    {
+      "slug": "smallrig-2791b-mobile-cage-review",
+      "name": "SmallRig Universal Mobile Phone Cage (2791B)",
+      "category_label": "Rigs & Cages",
+      "category_anchor": "index.html#cages",
+      "badge": "Review",
+      "asin": "",
+      "source": "SmallRig's product listing on B&H Photo",
+      "audience": "creators building a modular rig around a phone who want more mounting points than a minimalist cage offers",
+      "image": {
+        "src": "images/smallrig-2791b-cage.jpg",
+        "width": 1200,
+        "height": 750,
+        "alt": "SmallRig Universal Mobile Phone Cage holding a smartphone with cold shoe mounts visible"
+      },
+      "verdict_facts": [
+        { "label": "Weight", "value": "211 g" },
+        { "label": "Cold shoe mounts", "value": "4" },
+        { "label": "Phone width range", "value": "2.2&ndash;3.5 in" }
+      ],
+      "specs": [
+        { "spec": "Material", "value": "Aluminum alloy, stainless steel, silicone" },
+        { "spec": "Weight", "value": "211 g (7.4 oz)" },
+        { "spec": "Dimensions", "value": "220 &times; 125 &times; 34 mm" },
+        { "spec": "Phone width range", "value": "2.2&ndash;3.5 in, up to 0.7 in thick" },
+        { "spec": "Cold shoe mounts", "value": "4" },
+        { "spec": "Thread mounts", "value": "Multiple 1/4\"-20" }
+      ],
+      "known_pros": [
+        "Four cold shoe mounts is generous for stacking a mic, light and monitor at once",
+        "Screw-tightened clamp holds securely across a wide range of phone widths",
+        "Aluminum construction adds rigidity over plastic cages at a similar price"
+      ],
+      "known_cons": [
+        "No 3/8\" threads are listed, which can limit compatibility with some tripod heads without an adapter",
+        "Screw-tightening is slower to mount and remove than a spring-loaded cage, which matters for fast run-and-gun shooting"
+      ],
+      "sections": ["Build and mounting points", "Fitting your phone", "Who should buy it"],
+      "faq_questions": [
+        "Does the SmallRig 2791B fit phones with thick cases?",
+        "How many accessories can you mount at once?"
+      ]
+    },
+
+    {
+      "slug": "insta360-flow-2-pro-review",
+      "name": "Insta360 Flow 2 Pro",
+      "category_label": "Motion",
+      "category_anchor": "index.html#motion",
+      "badge": "Review",
+      "asin": "",
+      "source": "Insta360's published hardware specifications",
+      "audience": "iPhone-centric solo creators who want automated subject tracking without holding the phone themselves",
+      "image": {
+        "src": "images/insta360-flow-2-pro.jpg",
+        "width": 1200,
+        "height": 750,
+        "alt": "Insta360 Flow 2 Pro gimbal folded next to its magnetic phone clamp"
+      },
+      "verdict_facts": [
+        { "label": "Weight", "value": "~357 g" },
+        { "label": "Battery life", "value": "10 hr" },
+        { "label": "Extension rod", "value": "210 mm" }
+      ],
+      "specs": [
+        { "spec": "Gimbal weight", "value": "~357 g" },
+        { "spec": "Magnetic clamp weight", "value": "~25 g" },
+        { "spec": "Folded dimensions", "value": "97.9 &times; 178.4 &times; 36.7 mm" },
+        { "spec": "Unfolded dimensions", "value": "121.1 &times; 282.1 &times; 54 mm" },
+        { "spec": "Battery life", "value": "10 hr (tracking light off)" },
+        { "spec": "Charging time", "value": "80% in 55 min, full in 2 hr" },
+        { "spec": "Extension rod", "value": "210 mm" },
+        { "spec": "Magnetic hold force", "value": "40N" }
+      ],
+      "known_pros": [
+        "Apple DockKit support brings AI tracking to 200+ iOS apps without opening Insta360's own app",
+        "10-hour battery life is long for a folding gimbal",
+        "Fast charging reaches 80% in under an hour for quick turnarounds between shoots"
+      ],
+      "known_cons": [
+        "The AI Tracker hardware needed for full subject tracking is sold separately on some Flow 2 Pro bundles, so check what's included before buying",
+        "Not rated waterproof"
+      ],
+      "sections": ["Folding design and portability", "Tracking and battery life", "Who should buy it"],
+      "faq_questions": [
+        "Does the Insta360 Flow 2 Pro work with Android phones?",
+        "What's the difference between the Flow 2 Pro and Flow 2 Plus?"
+      ]
     }
   ]
 }

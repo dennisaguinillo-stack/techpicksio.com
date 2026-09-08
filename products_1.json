@@ -1,0 +1,93 @@
+{
+  "_comment": "Facts live here, not in the model. Everything under 'specs', 'verdict_facts', 'asin' and 'image' is copied verbatim into the page. Gemini only writes prose around them.",
+
+  "defaults": {
+    "affiliate_tag": "techpicksio-20",
+    "site_base": "https://www.techpicksio.com/",
+    "output_dir": ".",
+    "template": "rode-phone-cage-review.html"
+  },
+
+  "products": [
+    {
+      "slug": "dji-osmo-mobile-6-review",
+      "name": "DJI Osmo Mobile 6",
+      "category_label": "Motion",
+      "category_anchor": "index.html#motion",
+      "badge": "Editor's choice &mdash; smartphone gimbal",
+      "asin": "",
+      "source": "DJI published specifications",
+      "audience": "phone filmmakers who walk while they shoot and want steady footage without carrying a rig",
+      "image": {
+        "src": "images/dji-osmo-mobile-6.jpg",
+        "width": 1200,
+        "height": 750,
+        "alt": "DJI Osmo Mobile 6 gimbal holding a smartphone in landscape orientation"
+      },
+      "verdict_facts": [
+        { "label": "Weight", "value": "309 g" },
+        { "label": "Battery life", "value": "6 hr 24 min" },
+        { "label": "Payload", "value": "170&ndash;290 g" }
+      ],
+      "specs": [
+        { "spec": "Weight", "value": "309 g (gimbal only)" },
+        { "spec": "Folded size", "value": "189 &times; 84 &times; 44 mm" },
+        { "spec": "Battery life", "value": "6 hr 24 min (rated)" },
+        { "spec": "Charging time", "value": "1 hr 20 min" },
+        { "spec": "Compatible phone weight", "value": "170&ndash;290 g" },
+        { "spec": "Built-in extension rod", "value": "215 mm" },
+        { "spec": "Tripod", "value": "Included, screws into the base" }
+      ],
+      "known_pros": [
+        "Extension rod is built in, so there is nothing extra to pack",
+        "Magnetic clamp makes swapping the phone on and off fast",
+        "Side wheel controls zoom or focus without touching the screen"
+      ],
+      "known_cons": [
+        "Needs the DJI Mimo app for tracking, so features depend on app support for your phone",
+        "Heavier phones with thick cases can sit close to the payload limit"
+      ],
+      "sections": [
+        "Build and how it feels to hold",
+        "How steady the footage is",
+        "Battery and charging",
+        "Who should buy it"
+      ],
+      "faq_questions": [
+        "Does the DJI Osmo Mobile 6 work with Android phones?",
+        "Can you use it with a case on your phone?",
+        "Do you need the app to use it?"
+      ]
+    },
+
+    {
+      "slug": "example-second-product-review",
+      "name": "Second Product Name",
+      "category_label": "Audio",
+      "category_anchor": "index.html#audio",
+      "badge": "Review",
+      "asin": "",
+      "source": "manufacturer published specifications",
+      "audience": "who this is for, in plain words",
+      "image": {
+        "src": "images/second-product.jpg",
+        "width": 1200,
+        "height": 750,
+        "alt": "Descriptive alt text for the product photo"
+      },
+      "verdict_facts": [
+        { "label": "Weight", "value": "0 g" },
+        { "label": "Battery life", "value": "0 hr" },
+        { "label": "Connection", "value": "USB-C" }
+      ],
+      "specs": [
+        { "spec": "Weight", "value": "0 g" },
+        { "spec": "Connection", "value": "USB-C" }
+      ],
+      "known_pros": ["Real advantage one", "Real advantage two", "Real advantage three"],
+      "known_cons": ["Real drawback one", "Real drawback two"],
+      "sections": ["Build", "Sound", "Who should buy it"],
+      "faq_questions": ["First question people actually search?"]
+    }
+  ]
+}
