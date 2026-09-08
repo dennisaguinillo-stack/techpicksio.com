@@ -204,6 +204,15 @@ def image_bytes(url: str) -> int:
         return 0
 
 
+def image_dims(url: str, source: str) -> tuple[str, str]:
+    """Width/height for <media:content>. Read from the page's own og:image:width
+    /height meta tags rather than decoding the image again — the page is the
+    single source of truth and this keeps the feed and the page in sync."""
+    w = meta(source, prop="og:image:width")
+    h = meta(source, prop="og:image:height")
+    return w, h
+
+
 def collect() -> list[dict]:
     items = []
     for filename in sorted(os.listdir(".")):
@@ -215,6 +224,7 @@ def collect() -> list[dict]:
             continue
         published, modified = dates(filename, source)
         image = meta(source, prop="og:image")
+        width, height = image_dims(image, source)
         items.append({
             "title": meta(source, prop="og:title") or filename,
             "url": f"{SITE_URL}/{filename}",
@@ -226,6 +236,8 @@ def collect() -> list[dict]:
             "image": image,
             "mime": MIME.get(os.path.splitext(image)[1].lower(), "image/jpeg"),
             "bytes": image_bytes(image),
+            "width": width,
+            "height": height,
         })
     items.sort(key=lambda i: i["published"], reverse=True)
     return items[:MAX_ITEMS]
@@ -274,8 +286,11 @@ def build(items: list[dict]) -> str:
             f"      <category>{esc(item['category'])}</category>",
         ]
         if item["image"]:
+            dims = ""
+            if item["width"] and item["height"]:
+                dims = f' width="{item["width"]}" height="{item["height"]}"'
             out += [
-                f'      <media:content url="{item["image"]}" medium="image" type="{item["mime"]}">',
+                f'      <media:content url="{item["image"]}" medium="image" type="{item["mime"]}"{dims}>',
                 f"        <media:title type=\"plain\">{esc(item['title'])}</media:title>",
                 f"        <media:credit role=\"provider\">techpicksio.com</media:credit>",
                 "      </media:content>",

@@ -39,3 +39,6 @@ jobs:
             git pull --rebase origin main
             git push
           fi
+
+      - name: Submit URLs to IndexNow (Bing/Copilot)
+        run: python3 submit_indexnow.py
